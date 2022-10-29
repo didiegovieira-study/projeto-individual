@@ -1,92 +1,58 @@
-* {
-    padding: 0;
-    margin: 0;
-    color: #F1F1F1;
-    font-family: sans-serif;
-}
 
 a {
-    color: #F1F1F1;
+    color: #0055BD;
     text-decoration: none;
     transition: 0.3s;
 }
 
 a:hover {
+    background: rgba(0, 0, 0, .05);
     opacity: 0.7;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 1.5;
     text-transform: uppercase;
     letter-spacing: 4px;
+    font-weight: bold;
 }
 
-nav {
+#header {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: #23232e;
-    height: 8vh;
+    background-color: rgba(F, F, F, 0.6);
+    height: 10vh;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    padding: 0px 2rem 0 2rem;
 }
 
-main {
-    background: url(../assets/img/background.jpg) no-repeat center center;
-    background-size: cover;
-    height: 92vh;
-}
-
-.navbar {
-    list-style: none;
+#menu {
     display: flex;
+    list-style: none;
+    gap: .5rem;
 }
 
-.navbar li {
-    letter-spacing: 3px;
-    margin-left: 32px;
+#menu a {
+    display: block;
+    padding: .5rem;
 }
 
-.menu {
+#btnMenu {
     display: none;
-    cursor: pointer;
+    color: black;
 }
 
-.menu div {
-    width: 32px;
-    height: 2px;
-    background: #fff;
-    margin: 8px;
-}
-
-@media (max-width: 100%) {
-    body {
-        overflow-x: hidden;
-    }
-
-    .navbar {
-        position: absolute;
-        top: 8vh;
-        right: 0;
-        width: 50vw;
-        height: 92vh;
-        background: #23232e;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translate(100%);
-    }
-
-    .navbar li {
-        margin-left: 0;
-        opacity: 0;
-    }
-    
-    .menu {
+@media screen {
+    #btnMenu {
         display: block;
     }
+    #menu {
+        display: none;
+    }
 }
-
-.navbar.active {
-    transform: translateX(0);
-}
-
