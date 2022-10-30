@@ -3,5 +3,15 @@
     height: 60vh;
     border-radius: 50px 50px 0px 0px;
     background-color: #0055BD;
+    padding: 80px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    width: 200px;
+}
