@@ -2,19 +2,20 @@
 .home {
     background-color: #F3F3F3;
     background-size: cover;
-    height: 100vh;
+    height: 105vh;
 }
 
 .history {
     width: 100%;
-    height: 100vh;
+    height: 105vh;
     /* background-color: #BBFD00; */
     background-color: #0055BD;
 }
 
+
 .brazil {
     width: 100%;
-    height: 100vh;
+    height: 105vh;
     background-color: white;
 }
 

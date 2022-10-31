@@ -1,9 +1,11 @@
 header img {
     width: 50px;
+    text-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
 }
 
 header img:hover {
     cursor: pointer;
+    opacity: 0.7;
 }
 
 a {
@@ -12,7 +14,7 @@ a {
     transition: 0.3s;
 }
 
-a:hover {
+a:hover, .mobile-menu:hover {
     opacity: 0.7;
 }
 
