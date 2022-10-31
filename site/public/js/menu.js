@@ -5,3 +5,7 @@ function menu() {
     list.classList.toggle('ativo')
     console.log(list)
 }
+
+function chamar() {
+    
+}
