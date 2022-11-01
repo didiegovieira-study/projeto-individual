@@ -1,5 +1,130 @@
+
 .container {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
     width: 100%;
     height: 100vh;
-    background-color: white;
+}
+
+.background {
+    width: 37.5rem;
+    height: 100%;
+    background-image: url(../assets/img/login/screen.jpg);
+    background-size: cover;
+    border-radius: 8px;
+    background-position: center;
+    transition: background-image .8s ease;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.div_input, .button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+}
+
+.forgot-password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.forgot {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.title-description {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.title-description h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #2C3333;
+}
+
+.title-description p {
+    font-size: 14px;
+    color: #A7A7A7;
+}
+
+.div_input label {
+    color: #2C3333;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.div_input input {
+    height: 50px;
+    border: none;
+    background-color: #F5F5F5;
+    color: #8E8E8E;
+    padding: 8px;
+    border-radius: 4px;
+    outline: 0;
+}
+
+.div_input input:focus {
+    border: solid 1px #353a3a6e;
+}
+
+.forgot-password .forgot label {
+    font-size: 12px;
+    font-weight: 300;
+    color: #2C3333;
+}
+
+.forgot-password p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2C3333;
+}
+
+.button-fe {
+    height: 40px;
+    border: none;
+    background-color: #2666CF;
+    color: #F1F1F1;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+
+.back img {
+    width: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: left;
 }

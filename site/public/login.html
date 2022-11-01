@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +8,49 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/login.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/menu.css">
 
     <title>Login</title>
 </head>
 <body>
 
-    <header id="header">
-        <nav id="nav">
-            <a href="./index.html"><img src="./assets/logotipo/logoPreta.png" alt="LOGOTIPO"></a>
+    <section class="container">
+        
+        <div class="background" id="background">
+
+        </div>
+
+        <div class="box">
+            <div class="formulario">
+                <div class="title-description">
+                    <h1>Welcome back, Diego</h1>
+                    <p>Seja bem-vindo!</p>
+                </div>
+                <form class="input">
+                    <div class="div_input">
+                        <label for="">Email:</label>
+                        <input type="email" id="" placeholder="diego.vieira@sptech.school">
+                    </div>
+                    <div class="div_input">
+                        <label for="">Senha:</label>
+                        <input type="password" id="" placeholder="*********">
+                    </div>
+                    <div class="forgot-password">
+                        <div class="forgot">
+                            <input type="checkbox">
+                            <label for="">Remember me</label>
+                        </div>
+                        <p>Esqueci a Senha</p>
+                    </div>
+                    <div class="button">
+                        <button class="button-fe">LOGAR</button>
+                    </div>
+                </form>
+                        <p>Não tem conta? <a class="a-register" href="./cadastro.html">Cadastre-se</a></p>
+            </div>
+        </div>
+
+        <div class="menu">
             <div class="mobile-menu" onclick="menu()">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -28,35 +62,17 @@
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
+
                 <li><a href="./index.html">Início</a></li>
                 <li><a href="./login.html">Login</a></li>
                 <li><a href="./cadastro.html">Cadastro</a></li>
                 <!-- <li><a href="">História</a></li> -->
             </ul>
-        </nav>
-    </header>
-
-    <main>
-
-        <div class="container">
-
         </div>
 
-    </main>
-
-    <footer>
-        <div class="footer">
-            <div class="logo">
-                <img src="./assets/logotipo/logoBranca.png" alt="LOGOTIPO">
-                
-            </div>
-            <div class="info">
-
-            </div>
-        </div>
-    </footer>
+    </section>
 
 </body>
-    <script src="./js/menu.js"></script>
     <script src="./js/login.js"></script>
+    <script src="./js/menu.js"></script>
 </html>
