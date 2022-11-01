@@ -14,6 +14,7 @@
     background-size: cover;
     border-radius: 8px;
     background-position: center;
+    transition: background-image .8s ease;
 }
 
 .box {
@@ -119,4 +120,11 @@ form {
     text-transform: uppercase;
     cursor: pointer;
     
+}
+
+.back img {
+    width: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: left;
 }
