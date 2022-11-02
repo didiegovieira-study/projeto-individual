@@ -152,3 +152,31 @@ form {
 a {
     color: purple;
 }
+
+.back img {
+    width: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: left;
+}
+
+.back {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back a {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.back a img {
+    width: 40px;
+    transition: .1s ease-in;
+}
+
+.back a img:hover {
+    width: 45px;
+    transform: translate(-5%, -5%);
+}

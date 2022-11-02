@@ -137,7 +137,28 @@ a {
     color: purple;
 }
 
-p:hover {
+.p-senha:hover {
     opacity: 0.8;
     cursor: pointer;
+}
+
+.back {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back a {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.back a img {
+    width: 40px;
+    transition: .1s ease-in;
+}
+
+.back a img:hover {
+    width: 45px;
+    transform: translate(-5%, -5%);
 }
