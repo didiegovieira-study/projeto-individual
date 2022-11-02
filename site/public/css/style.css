@@ -3,6 +3,8 @@
     background-color: #FFFFFF;
     background-size: cover;
     height: 105vh;
+    margin-top: 10vh;
+    padding: 20px;
 }
 
 .history {
