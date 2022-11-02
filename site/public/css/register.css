@@ -76,13 +76,13 @@ form {
     color: #A7A7A7;
 }
 
-.div_input label {
+.div_input label, .div_inputNome label {
     color: #2C3333;
     font-weight: 300;
     font-size: 12px;
 }
 
-.div_input input {
+.div_input input, .div_inputNome input {
     height: 50px;
     border: none;
     background-color: #F5F5F5;
@@ -119,4 +119,28 @@ form {
     text-transform: uppercase;
     cursor: pointer;
     
+}
+
+.div_inputNome label {
+    color: #2C3333;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.div_inputNome input {
+    height: 50px;
+    border: none;
+    background-color: #F5F5F5;
+    color: #8E8E8E;
+    padding: 8px;
+    border-radius: 4px;
+    outline: 0;
+    width: 100%;
+}
+
+.div_inputNome {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 8px;
 }
