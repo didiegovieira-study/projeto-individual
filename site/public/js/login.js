@@ -2,8 +2,8 @@
     function entrar() {
         aguardar();
 
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
+        var emailVar = inputEmail.value;
+        var senhaVar = inputPass.value;
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
