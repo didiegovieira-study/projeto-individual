@@ -128,3 +128,7 @@ form {
     display: flex;
     justify-content: left;
 }
+
+a {
+    color: purple;
+}
