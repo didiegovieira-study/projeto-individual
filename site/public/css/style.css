@@ -16,6 +16,7 @@
 .brazil {
     width: 100%;
     height: 105vh;
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
+    background-image: url(../assets/img/background/a5a46682038505.5f35e0f043dc5.jpg);
 }
 
