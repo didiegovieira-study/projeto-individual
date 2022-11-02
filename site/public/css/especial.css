@@ -49,10 +49,10 @@ h2 {
     height: 100%;
     background-image: url(../assets/img/especial/background-2.png);
     background-size: cover;
-    border-radius: 8px;
     background-position: center;
     transition: background-image .8s ease-in;
 }
+
 
 .text {
     display: flex;

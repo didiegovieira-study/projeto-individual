@@ -28,7 +28,7 @@ nav {
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background-color: rgba(F, F, F, 0.6);
-    height: 10vh;
+    height: 8vh;
     backdrop-filter: blur(8px);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
     position: fixed;
@@ -54,10 +54,10 @@ nav {
 }
 
 .mobile-menu div {
-    width: 28px;
+    width: 22px;
     height: 2px;
     background: black;
-    margin: 8px;
+    margin: 6px;
     transition: .3s;
 }
 
@@ -98,7 +98,7 @@ nav {
     }
 
     .mobile-menu.menu2 div {
-        width: 28px;
+        width: 22px;
         height: 2px;
         background: #FFFFFF;
         margin: 8px;
@@ -166,6 +166,6 @@ a {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     
 }
