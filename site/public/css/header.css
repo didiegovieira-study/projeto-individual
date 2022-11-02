@@ -95,15 +95,14 @@ nav {
         z-index: 1;
     }
 
-    .nav-list.ativo {
-        transform: translateX(0);
-    }
-
-    .mobile-menu2 div {
+    .mobile-menu.menu2 div {
         width: 32px;
         height: 2px;
-        background: black;
+        background: #FFFFFF;
         margin: 8px;
     }
 }
 
+.nav-list.ativo {
+    transform: translateX(0);
+}
