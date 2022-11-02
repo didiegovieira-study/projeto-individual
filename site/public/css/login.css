@@ -120,7 +120,10 @@ form {
     border-radius: 4px;
     text-transform: uppercase;
     cursor: pointer;
-    
+}
+
+.button-fe:hover {
+    opacity: 0.95;
 }
 
 .back img {
@@ -132,4 +135,13 @@ form {
 
 a {
     color: purple;
+}
+
+p:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.forgot:hover {
+    cursor: pointer;
 }

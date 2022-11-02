@@ -118,7 +118,10 @@ form {
     border-radius: 4px;
     text-transform: uppercase;
     cursor: pointer;
-    
+}
+
+.button-fe:hover {
+    opacity: 0.95;
 }
 
 .div_inputNome label {
