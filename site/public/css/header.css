@@ -57,6 +57,7 @@ nav {
     height: 2px;
     background: black;
     margin: 8px;
+    transition: .3s;
 }
 
 @media screen {
@@ -100,9 +101,25 @@ nav {
         height: 2px;
         background: #FFFFFF;
         margin: 8px;
+        transition: .3s;
+        position: relative;
     }
 }
 
 .nav-list.ativo {
     transform: translateX(0);
+}
+
+.mobile-menu.menu2 .line1{
+    background: transparent;
+    transform: rotate(-135deg);
+}
+
+.mobile-menu.menu2 .line2 {
+    transform: rotate(135deg);
+}
+
+.mobile-menu.menu2 .line3 {
+    transform: rotate(-135deg);
+    top: -10px;
 }
