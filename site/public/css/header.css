@@ -53,7 +53,7 @@ nav {
 }
 
 .mobile-menu div {
-    width: 32px;
+    width: 28px;
     height: 2px;
     background: black;
     margin: 8px;
@@ -81,13 +81,13 @@ nav {
         transition: transform 0.3s ease-in;
         backdrop-filter: blur(10px);
         z-index: 0;
+        padding: 200px;
     }
     
     .nav-list li {
         position: relative;
         z-index: 1;
         margin-left: 0;
-        /* opacity: 0; */
         margin-bottom: 50px;
     }
     
@@ -97,7 +97,7 @@ nav {
     }
 
     .mobile-menu.menu2 div {
-        width: 32px;
+        width: 28px;
         height: 2px;
         background: #FFFFFF;
         margin: 8px;
