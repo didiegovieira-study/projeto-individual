@@ -14,7 +14,7 @@
 </head>
 <body>
     
-    <section class="container">
+    <section class="container" id="container">
         <div class="background" id="background">
 
         </div>
@@ -32,7 +32,7 @@
                     </div>
                     <p>Juntos pela glória eterna!</p>
                 </div>
-                <form class="input">
+                <div class="input">
                     <div class="div_inputNome">
                         <div class="nome">
                             <label for="">Nome:</label>
@@ -65,7 +65,7 @@
                     <div class="button">
                         <button class="button-fe" onclick="prosseguir1()">PROSSEGUIR</button>
                     </div>
-                </form>
+                </div>
                         <p>Já tem conta? <a class="a-register" href="./login.html">Logue</a></p>
             </div>
         </div>
@@ -89,7 +89,7 @@
                     </div>
                     <p>Juntos pela glória eterna!</p>
                 </div>
-                <form class="input">
+                <div class="input">
                     <div class="div_inputNome">
                         <div class="nome">
                             <label for="">Nome:</label>
@@ -122,7 +122,7 @@
                     <div class="button">
                         <button class="button-fe" onclick="prosseguir2()">PROSSEGUIR</button>
                     </div>
-                </form>
+                </div>
                         <p>Já tem conta? <a class="a-register" href="./login.html">Logue</a></p>
             </div>
         </div>
@@ -146,7 +146,7 @@
                     </div>
                     <p>Juntos pela glória eterna!</p>
                 </div>
-                <form class="input">
+                <div class="input">
                     <div class="div_inputNome">
                         <div class="nome">
                             <label for="">Nome:</label>
@@ -179,20 +179,20 @@
                     <div class="button">
                         <button class="button-fe" onclick="cadastrar()">REGISTRAR!</button>
                     </div>
-                </form>
+                </div>
                         <p>Já tem conta? <a class="a-register" href="./login.html">Logue</a></p>
             </div>
         </div>
     </section>
 
 </body>
-    <script src="./js/img.js"></script>
     <script src="./js/register.js"></script>
+    <script src="./js/img.js"></script>
 </html>
 
 <script>
 
-    function prosseguir1() {
+/*     function prosseguir1() {
         var displayCont = document.querySelector(".container")
 
         displayCont.classList.toggle('ativo')
@@ -200,6 +200,11 @@
         var displayCont2 = document.querySelector(".container2")
 
         displayCont2.classList.toggle('ativo')
+    }
+ */
+    function prosseguir1() {
+        container.style.display = "none"
+        container2.style.display = "flex"
     }
 
     function prosseguir2() {
