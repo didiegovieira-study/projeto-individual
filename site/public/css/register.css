@@ -113,7 +113,7 @@ form {
     border: solid 1px #353a3a6e;
 }
 
-/* .forgot-password .forgot label {
+.forgot-password .forgot label {
     font-size: 12px;
     font-weight: 300;
     color: #2C3333;
@@ -123,7 +123,7 @@ form {
     font-size: 12px;
     font-weight: 500;
     color: #2C3333;
-} */
+}
 
 .button-fe {
     height: 40px;
@@ -197,7 +197,7 @@ a {
     transform: translate(-5%, -5%);
 }
 
-.dot {
+.dot1, .dot2, .dot3 {
     height: 25px;
     width: 25px;
     background-color: #F5F5F5;
@@ -209,4 +209,16 @@ a {
 .circle {
     top: 2vw;
     position: fixed;
+}
+
+.dot1 {
+    background-color: #2666CF;
+}
+
+.dot2 {
+    background-color: #5D9E5c;
+}
+
+.dot3 {
+    background-color: #E6Be36;
 }
