@@ -19,6 +19,11 @@
 
         </div>
         <div class="box">
+            <div class="circle">
+                <span class="dot" style="background-color: #2666CF;"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
             <div class="formulario">
                 <div class="title-description">
                     <div class="back">
@@ -58,7 +63,7 @@
                         <!-- <p>Esqueci a Senha</p> -->
                     </div>
                     <div class="button">
-                        <button class="button-fe">REGISTRAR</button>
+                        <button class="button-fe" onclick="prosseguir1()">PROSSEGUIR</button>
                     </div>
                 </form>
                         <p>Já tem conta? <a class="a-register" href="./login.html">Logue</a></p>
@@ -66,9 +71,140 @@
         </div>
     </section>
 
-    
+    <section class="container2" id="container2">
+        <div class="background" id="background">
+
+        </div>
+        <div class="box">
+            <div class="circle">
+                <span class="dot"></span>
+                <span class="dot" style="background-color: #5D9E5c;"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="formulario">
+                <div class="title-description">
+                    <div class="back">
+                        <h1>Seja bem-vindo!</h1>
+                        <a href="./"><img src="./assets/img/login/button-back.png" alt=""></a>
+                    </div>
+                    <p>Juntos pela glória eterna!</p>
+                </div>
+                <form class="input">
+                    <div class="div_inputNome">
+                        <div class="nome">
+                            <label for="">Nome:</label>
+                            <input type="text" id="" placeholder="Nome">
+                        </div>
+                        <div class="sobrenome">
+                            <label for="Sobrenome">Sobrenome:</label>
+                            <input type="text" placeholder="Sobrenome">
+                        </div>
+                    </div>
+                    <div class="div_input">
+                        <label for="">Email:</label>
+                        <input type="email" id="" placeholder="diego.vieira@sptech.school">
+                    </div>
+                    <div class="div_input">
+                        <label for="">Senha:</label>
+                        <input type="password" id="" placeholder="*********">
+                    </div>
+                    <div class="div_input">
+                        <label for="">Confirmar Senha:</label>
+                        <input type="password" id="" placeholder="*********">
+                    </div>
+                    <div class="forgot-password">
+                        <div class="forgot">
+                            <input type="checkbox">
+                            <label for="">Concordo com os <a href="">Termos de Uso</a></label>
+                        </div>
+                        <!-- <p>Esqueci a Senha</p> -->
+                    </div>
+                    <div class="button">
+                        <button class="button-fe" onclick="prosseguir2()">PROSSEGUIR</button>
+                    </div>
+                </form>
+                        <p>Já tem conta? <a class="a-register" href="./login.html">Logue</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container3" id="container3" style="display: none;">
+        <div class="background" id="background">
+
+        </div>
+        <div class="box">
+            <div class="circle">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot" style="background-color: #E6Be36;"></span>
+            </div>
+            <div class="formulario">
+                <div class="title-description">
+                    <div class="back">
+                        <h1>Seja bem-vindo!</h1>
+                        <a href="./"><img src="./assets/img/login/button-back.png" alt=""></a>
+                    </div>
+                    <p>Juntos pela glória eterna!</p>
+                </div>
+                <form class="input">
+                    <div class="div_inputNome">
+                        <div class="nome">
+                            <label for="">Nome:</label>
+                            <input type="text" id="" placeholder="Nome">
+                        </div>
+                        <div class="sobrenome">
+                            <label for="Sobrenome">Sobrenome:</label>
+                            <input type="text" placeholder="Sobrenome">
+                        </div>
+                    </div>
+                    <div class="div_input">
+                        <label for="">Email:</label>
+                        <input type="email" id="" placeholder="diego.vieira@sptech.school">
+                    </div>
+                    <div class="div_input">
+                        <label for="">Senha:</label>
+                        <input type="password" id="" placeholder="*********">
+                    </div>
+                    <div class="div_input">
+                        <label for="">Confirmar Senha:</label>
+                        <input type="password" id="" placeholder="*********">
+                    </div>
+                    <div class="forgot-password">
+                        <div class="forgot">
+                            <input type="checkbox">
+                            <label for="">Concordo com os <a href="">Termos de Uso</a></label>
+                        </div>
+                        <!-- <p>Esqueci a Senha</p> -->
+                    </div>
+                    <div class="button">
+                        <button class="button-fe" onclick="cadastrar()">REGISTRAR!</button>
+                    </div>
+                </form>
+                        <p>Já tem conta? <a class="a-register" href="./login.html">Logue</a></p>
+            </div>
+        </div>
+    </section>
 
 </body>
     <script src="./js/img.js"></script>
     <script src="./js/register.js"></script>
 </html>
+
+<script>
+
+    function prosseguir1() {
+        var displayCont = document.querySelector(".container")
+
+        displayCont.classList.toggle('ativo')
+
+        var displayCont2 = document.querySelector(".container2")
+
+        displayCont2.classList.toggle('ativo')
+    }
+
+    function prosseguir2() {
+        container2.style.display = "none"
+        container3.style.display = "flex"
+    }
+    
+</script>
