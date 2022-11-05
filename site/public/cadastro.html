@@ -14,15 +14,19 @@
 </head>
 <body>
     
+<<<<<<< HEAD
     <section class="container ativo">
+=======
+    <section class="container" id="container">
+>>>>>>> f37495e28e18adc12b1a421557bd5f476c10241b
         <div class="background" id="background">
 
         </div>
         <div class="box">
             <div class="circle">
-                <span class="dot" style="background-color: #2666CF;"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+                <span class="dot1"></span>
+                <span class="dot2"></span>
+                <span class="dot3"></span>
             </div>
             <div class="formulario">
                 <div class="title-description">
@@ -32,7 +36,7 @@
                     </div>
                     <p>Juntos pela glória eterna!</p>
                 </div>
-                <form class="input">
+                <div class="input">
                     <div class="div_inputNome">
                         <div class="nome">
                             <label for="">Nome:</label>
@@ -65,7 +69,7 @@
                     <div class="button">
                         <button class="button-fe" onclick="passarDiv()">PROSSEGUIR</button>
                     </div>
-                </form>
+                </div>
                         <p>Já tem conta? <a class="a-register" href="./login.html">Logue</a></p>
             </div>
         </div>
@@ -77,9 +81,9 @@
         </div>
         <div class="box">
             <div class="circle">
-                <span class="dot"></span>
-                <span class="dot" style="background-color: #5D9E5c;"></span>
-                <span class="dot"></span>
+                <span class="dot1"></span>
+                <span class="dot2"></span>
+                <span class="dot3"></span>
             </div>
             <div class="formulario">
                 <div class="title-description">
@@ -89,7 +93,7 @@
                     </div>
                     <p>Juntos pela glória eterna!</p>
                 </div>
-                <form class="input">
+                <div class="input">
                     <div class="div_inputNome">
                         <div class="nome">
                             <label for="">Nome:</label>
@@ -122,7 +126,7 @@
                     <div class="button">
                         <button class="button-fe" onclick="prosseguir2()">PROSSEGUIR</button>
                     </div>
-                </form>
+                </div>
                         <p>Já tem conta? <a class="a-register" href="./login.html">Logue</a></p>
             </div>
         </div>
@@ -134,9 +138,9 @@
         </div>
         <div class="box">
             <div class="circle">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot" style="background-color: #E6Be36;"></span>
+                <span class="dot1"></span>
+                <span class="dot2"></span>
+                <span class="dot3"></span>
             </div>
             <div class="formulario">
                 <div class="title-description">
@@ -146,7 +150,7 @@
                     </div>
                     <p>Juntos pela glória eterna!</p>
                 </div>
-                <form class="input">
+                <div class="input">
                     <div class="div_inputNome">
                         <div class="nome">
                             <label for="">Nome:</label>
@@ -179,18 +183,41 @@
                     <div class="button">
                         <button class="button-fe" onclick="cadastrar()">REGISTRAR!</button>
                     </div>
-                </form>
+                </div>
                         <p>Já tem conta? <a class="a-register" href="./login.html">Logue</a></p>
             </div>
         </div>
     </section>
 
 </body>
-    <script src="./js/img.js"></script>
     <script src="./js/register.js"></script>
+    <script src="./js/img.js"></script>
 </html>
 
 <script>
 
+<<<<<<< HEAD
 
+=======
+/*     function prosseguir1() {
+        var displayCont = document.querySelector(".container")
+
+        displayCont.classList.toggle('ativo')
+
+        var displayCont2 = document.querySelector(".container2")
+
+        displayCont2.classList.toggle('ativo')
+    }
+ */
+    function prosseguir1() {
+        container.style.display = "none"
+        container2.style.display = "flex"
+    }
+
+    function prosseguir2() {
+        container2.style.display = "none"
+        container3.style.display = "flex"
+    }
+    
+>>>>>>> f37495e28e18adc12b1a421557bd5f476c10241b
 </script>
