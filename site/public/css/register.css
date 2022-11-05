@@ -203,9 +203,11 @@ a {
     position: fixed;
 }
 
-.container.ativo {
-    display: none;
-}
-.container2.ativo {
+
+.ativo{
     display: flex;
+}
+
+.desativo{
+    display: none;
 }

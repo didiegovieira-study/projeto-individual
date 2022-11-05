@@ -1,5 +1,5 @@
 header img {
-    width: 50px;
+    width: 8vw;
     text-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
 }
 
@@ -7,15 +7,6 @@ header img:hover {
     cursor: pointer;
     opacity: 0.7;
 }
-
-/* li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: 0.3s;
-    text-decoration: solid 1px #000000;
-    font-size: 60px;
-    font-weight: 700;
-} */
 
 a:hover {
     opacity: 0.7;

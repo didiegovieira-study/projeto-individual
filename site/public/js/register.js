@@ -63,3 +63,12 @@ function sumirMensagem() {
 }
 
 
+function passarDiv(){
+    var diegao = document.querySelector('.container')
+    var nathanzao = document.querySelector('.container2')
+    
+    diegao.classList.remove('ativo')
+    diegao.classList.add('desativo')
+    nathanzao.classList.remove('desativo')
+    nathanzao.classList.add('ativo')
+    }

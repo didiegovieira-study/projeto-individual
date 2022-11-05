@@ -14,7 +14,7 @@
 </head>
 <body>
     
-    <section class="container">
+    <section class="container ativo">
         <div class="background" id="background">
 
         </div>
@@ -63,7 +63,7 @@
                         <!-- <p>Esqueci a Senha</p> -->
                     </div>
                     <div class="button">
-                        <button class="button-fe" onclick="prosseguir1()">PROSSEGUIR</button>
+                        <button class="button-fe" onclick="passarDiv()">PROSSEGUIR</button>
                     </div>
                 </form>
                         <p>Já tem conta? <a class="a-register" href="./login.html">Logue</a></p>
@@ -71,7 +71,7 @@
         </div>
     </section>
 
-    <section class="container2" id="container2">
+    <section class="container2 desativo" id="container2">
         <div class="background" id="background">
 
         </div>
@@ -128,7 +128,7 @@
         </div>
     </section>
 
-    <section class="container3" id="container3" style="display: none;">
+    <section class="container3 desativo" id="container3" style="display: none;">
         <div class="background" id="background">
 
         </div>
@@ -192,19 +192,5 @@
 
 <script>
 
-    function prosseguir1() {
-        var displayCont = document.querySelector(".container")
 
-        displayCont.classList.toggle('ativo')
-
-        var displayCont2 = document.querySelector(".container2")
-
-        displayCont2.classList.toggle('ativo')
-    }
-
-    function prosseguir2() {
-        container2.style.display = "none"
-        container3.style.display = "flex"
-    }
-    
 </script>
