@@ -211,16 +211,6 @@ a {
     position: fixed;
 }
 
-<<<<<<< HEAD
-
-.ativo{
-    display: flex;
-}
-
-.desativo{
-    display: none;
-}
-=======
 .dot1 {
     background-color: #2666CF;
 }
@@ -232,4 +222,3 @@ a {
 .dot3 {
     background-color: #E6Be36;
 }
->>>>>>> f37495e28e18adc12b1a421557bd5f476c10241b

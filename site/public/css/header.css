@@ -45,10 +45,12 @@ nav {
 }
 
 .mobile-menu div {
-    width: 22px;
-    height: 2px;
-    background: black;
-    margin: 6px;
+    width: 30px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: black;
+    margin: 4px;
+    /* border: 0.1px solid #FFFFFF; */
     transition: .3s;
 }
 
@@ -114,6 +116,14 @@ nav {
 .mobile-menu.menu2 .line3 {
     transform: rotate(-135deg);
     top: -10px;
+}
+
+.mobile-menu.menu2 .line {
+    border: 0px;
+}
+
+.line{
+    border: .1px solid rgba(255, 255, 255, 0.233);
 }
 
 h1, a {
