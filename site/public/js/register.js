@@ -3,12 +3,14 @@ function cadastrar() {
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-    var nomeVar = nome_input.value;
-    var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmacao_senha_input.value;
+    var nomeVar = inNome.value;
+    var sobreVar = inSobrenome.value;
+    var emailVar = inEmail.value;
+    var senhaVar = inPass.value;
+    var confirmacaoSenhaVar = inPassConfirm.value;
+    
 
-    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || sobreVar == "") {
         cardErro.style.display = "block"
         mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -29,6 +31,7 @@ function cadastrar() {
             // crie um atributo que recebe o valor recuperado aqui
             // Agora vá para o arquivo routes/usuario.js
             nomeServer: nomeVar,
+            sobreServer: sobreVar,
             emailServer: emailVar,
             senhaServer: senhaVar
         })
@@ -62,13 +65,3 @@ function sumirMensagem() {
     cardErro.style.display = "none"
 }
 
-
-function passarDiv(){
-    var diegao = document.querySelector('.container')
-    var nathanzao = document.querySelector('.container2')
-    
-    diegao.classList.remove('ativo')
-    diegao.classList.add('desativo')
-    nathanzao.classList.remove('desativo')
-    nathanzao.classList.add('ativo')
-    }
