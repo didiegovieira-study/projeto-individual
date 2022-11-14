@@ -33,10 +33,10 @@
     transition: background-image .8s ease-in;
 }
 
-.box {
+.box1, .box2 {
     width: 100%;
     height: 100%;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -128,7 +128,7 @@ form {
 .button-fe {
     height: 40px;
     border: none;
-    background-color: black;
+    background-color: #2666CF;
     color: #F1F1F1;
     font-size: 12px;
     font-weight: 600;
@@ -197,7 +197,7 @@ a {
     transform: translate(-5%, -5%);
 }
 
-.dot1, .dot2, .dot3 {
+.dot1, .dot2{
     height: 25px;
     width: 25px;
     background-color: #F5F5F5;
@@ -211,14 +211,13 @@ a {
     position: fixed;
 }
 
+
+
 .dot1 {
-    background-color: #2666CF;
+    background-color: #E6Be36;
 }
 
 .dot2 {
     background-color: #5D9E5c;
 }
 
-.dot3 {
-    background-color: #E6Be36;
-}
