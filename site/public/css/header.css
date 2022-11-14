@@ -22,22 +22,24 @@ nav {
     height: 8vh;
     backdrop-filter: blur(8px);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     padding: 0px 2rem 0 2rem;
+
 }
 
 .block {
     list-style: none;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 20vw;
 }
 
-.block h1{
+/* .block h1{
     letter-spacing: 2px;
     margin-left: 32px;
-    
-}
+} */
 
 .mobile-menu {
     display: none;
@@ -45,8 +47,8 @@ nav {
 }
 
 .mobile-menu div {
-    width: 30px;
-    height: 5px;
+    width: 20px;
+    height: 2px;
     border-radius: 10px;
     background-color: black;
     margin: 4px;
@@ -63,7 +65,7 @@ nav {
         position: absolute;
         top: 0px;
         right: 0;
-        width: 100%;
+        width: 30vw;
         height: 100vh;
         background-color: #000000;
         opacity: 0.8;
@@ -71,17 +73,15 @@ nav {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        transform: translate(0, -110%);
+        transform: translate(100%, 0);
         transition: transform 0.3s ease-in;
-        backdrop-filter: blur(10px);
-        z-index: 0;
         padding: 200px;
     }
     
     .nav-list a {
         position: relative;
         z-index: 1;
-        margin-left: 0;
+        margin-left: 5vw;
         margin-bottom: 50px;
     }
     
@@ -118,14 +118,6 @@ nav {
     top: -10px;
 }
 
-.mobile-menu.menu2 .line {
-    border: 0px;
-}
-
-.line{
-    border: .1px solid rgba(255, 255, 255, 0.233);
-}
-
 h1, a {
     color: #FFFFFF;
     text-decoration: none;
@@ -134,7 +126,7 @@ h1, a {
 
 .box-bar {
     background-color: transparent;
-    width: 4vw;
+    width: 50px;
     height: 2vh;
     border-radius: 10px;
     overflow: hidden;
@@ -156,7 +148,7 @@ h1, a {
     transition: transform .5s ease;
  }
  
- a:hover .bar{
+a:hover .bar{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
  }
@@ -164,9 +156,11 @@ h1, a {
 a {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 h1 {
-    font-size: 2rem;
-    
+    font-size: 1rem;
+    text-align: left;
+
 }
