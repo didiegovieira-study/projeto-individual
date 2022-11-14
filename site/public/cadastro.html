@@ -21,7 +21,6 @@
         <div class="box1" id="box1" style="display: flex;">
             <div class="circle">
                 <span class="dot1"></span>
-                <span class="dot2"></span>
                 <span class="dot3"></span>
             </div>
             <div class="formulario">
@@ -72,9 +71,8 @@
 
         <div class="box2" id="box2" style="display: none;">
             <div class="circle">
-                <span class="dot1"></span>
-                <span class="dot2"></span>
                 <span class="dot3"></span>
+                <span class="dot2"></span>
             </div>
             <div class="formulario">
                 <div class="title-description">
@@ -89,8 +87,8 @@
                     <div class="div_input">
                         <label for="">Selecione uma Seleção:</label>
                         <div class="div_selecao">
-                            <select name="" id="selSelecao">
-                                <option value=""></option>
+                            <select name="" id="selSelecao" onchange="selecao()">
+                                <option value="0"></option>
                                 <option value="1">Alemanha</option>
                                 <option value="2">Arábia Saudita</option>
                                 <option value="3">Argentina</option>
@@ -126,7 +124,7 @@
                             </select>
 
                             <div class="div_img">
-                                <img id="image" src="" alt="Flag">
+                                <img id="images" src="./assets/img/selecao/0.png" alt="Flag">
                             </div>
 
                         </div>
@@ -135,40 +133,16 @@
                     <div class="div_input">
                         <label for="">Selecione um idolo:</label>
                         <div class="div_selecao">
-                            <select name="" id="" onchange="selecao()">
-                                <option value=""></option>
-                                <option value="1">Alemanha</option>
-                                <option value="2">Arábia Saudita</option>
-                                <option value="3">Argentina</option>
-                                <option value="4">Austrália</option>
-                                <option value="5">Bélgica</option>
-                                <option value="6">Brasil</option>
-                                <option value="7">Camarões</option>
-                                <option value="8">Canadá</option>
-                                <option value="9">Catar</option>
-                                <option value="10">Coreia do Sul</option>
-                                <option value="11">Costa Rica</option>
-                                <option value="12">Croácia</option>
-                                <option value="13">Dinamarca</option>
-                                <option value="14">Equador</option>
-                                <option value="15">Espanha</option>
-                                <option value="16">Estados Unidos</option>
-                                <option value="17">França</option>
-                                <option value="18">Gana</option>
-                                <option value="19">Holanda</option>
-                                <option value="20">Inglaterra</option>
-                                <option value="21">Irã</option>
-                                <option value="22">Japão</option>
-                                <option value="23">Marrocos</option>
-                                <option value="24">México</option>
-                                <option value="25">País de Gales</option>
-                                <option value="26">Polônia</option>
-                                <option value="27">Portugal</option>
-                                <option value="28">Senegal</option>
-                                <option value="29">Sérvia</option>
-                                <option value="30">Suíça</option>
-                                <option value="31">Tunísia</option>
-                                <option value="32">Uruguai</option>
+                            <select name="" id="selIdolo" onchange="">
+                                <option value="0"></option>
+                                <option value="1">Neymar</option>
+                                <option value="2">Ronaldo Fenomeno</option>
+                                <option value="3">Kaka</option>
+                                <option value="4">Cristiano Ronaldo</option>
+                                <option value="5">Messi</option>
+                                <option value="6">Ronaldinho Gaucho</option>
+                                <option value="7">Puyol</option>
+                                <option value="8">Neuer</option>
                             </select>
                             
                         </div>
@@ -209,9 +183,10 @@
     var senhaVar = inPass.value;
     var confirmacaoSenhaVar = inPassConfirm.value;
     var selecaoVar = selSelecao.value;
+    var idoloVar = selIdolo.value;
     
 
-    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || sobreVar == "") {
+    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || sobreVar == "" || selecaoVar == '0' || idoloVar == '0') {
         // cardErro.style.display = "block"
         // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -234,7 +209,9 @@
             nomeServer: nomeVar,
             sobreServer: sobreVar,
             emailServer: emailVar,
-            senhaServer: senhaVar
+            senhaServer: senhaVar,
+            selecaoServer: selecaoVar,
+            idoloServer: idoloVar,
         })
     }).then(function (resposta) {
 

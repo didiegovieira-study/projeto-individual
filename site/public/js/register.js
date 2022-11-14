@@ -3,6 +3,7 @@
         box1.style.display = "none"
         box2.style.display = "flex"
 
+        
     }
 
     function voltar() {
@@ -11,11 +12,11 @@
     }
 
     function selecao() {
-        var sel = document.getElementById('selSelecao');
-        var img = document.getElementById('image');
+        var sel = Number(document.getElementById('selSelecao').value);
+        var img = document.getElementById('images');
 
-        if (sel == '') {
-            img.src = ''
+        if (sel == 0) {
+            img.src = './assets/img/selecao/0.png'
         } else if (sel == 1) {
             img.src = './assets/img/selecao/1.png'
         } else if (sel == 2) {

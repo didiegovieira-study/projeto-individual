@@ -21,17 +21,33 @@ CREATE TABLE selecao (
 );
 
 CREATE TABLE idoloUsuario (
-	fkUsuario INT,
+	fkUsuario INT AUTO_INCREMENT,
 	FOREIGN KEY (fkUsuario) REFERENCES usuario (idUsuario),
 	fkIdolo INT,
 	FOREIGN KEY (fkIdolo) REFERENCES idolo (idIdolo),
 	PRIMARY KEY (fkUsuario, fkIdolo)
 );
 
-CREATE TABLE idoloSelecao (
-	fkUsuario INT,
+CREATE TABLE selecaoUsuario (
+	fkUsuario INT AUTO_INCREMENT,
 	FOREIGN KEY (fkUsuario) REFERENCES usuario (idUsuario),
 	fkSelecao INT,
 	FOREIGN KEY (fkSelecao) REFERENCES selecao (idSelecao),
 	PRIMARY KEY (fkUsuario, fkSelecao)
 );
+
+INSERT INTO selecao (nome) VALUES 
+	('Alemanha');
+
+INSERT INTO idolo (nome) VALUES 
+	('Neymar'),
+	('Ronaldo Fenomeno'),
+	('Kaka'),
+	('Cristiano Ronaldo'),
+	('Messi'),
+	('Ronaldinho Gaucho'),
+	('Puyol'),
+	('Neuer');
+
+
+SELECT * FROM usuario;
