@@ -2,10 +2,21 @@
 
 .home {
     background-color: #FFFFFF;
-    background-size: cover;
-    height: 110vh;
-    padding: 20px;
+    height: 100vh;
+    padding-top: 8vh;
+    display: flex;
+    justify-content: center;
+}
 
+.conteudo {
+    height: 90vh;
+    width: 70vw;
+    background-color: #FFFFFF;
+}
+
+.home img {
+    margin-left: 20vw;
+    /* position: absolute; */
 }
 
 .history {
@@ -13,6 +24,7 @@
     height: 110vh;
     /* background-color: #BBFD00; */
     background-image: url(../assets/img/background/background.jpg);
+    background-size: cover;
 }
 
 
@@ -29,4 +41,20 @@
     background-color: #FFFFFF;
     opacity: 0.7;
 
+}
+
+.black-bar {
+    height: 100%;
+    width: 30vw;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+}
+
+.div-line {
+    width: 52px;
+    height: 4px;
+    background-color: #FFFFFF;
+    padding: 1px;
+    /* z-index: 5; */
 }
