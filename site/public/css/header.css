@@ -76,6 +76,7 @@ nav {
         transform: translate(100%, 0);
         transition: transform 0.3s ease-in;
         padding: 200px;
+        
     }
     
     .navList a {
@@ -102,7 +103,7 @@ nav {
 
 .navList.ativo {
     transform: translateX(0);
-
+    backdrop-filter: blur(2px);
 }
 
 .mobileMenu.menu2 .line1{
