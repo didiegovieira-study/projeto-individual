@@ -17,11 +17,18 @@
         </div>
 
         <div class="divSelecao">
-
+            <img id="imgSelecao" src="" alt="bandeira">
         </div>
 
         <div class="divProfile">
+            <img src="../assets/img/icon/do-utilizador2.png" alt="" onclick="menu()">
+        </div>
+    </div>
 
+    <div class="menu" id="menu" style="display: none;">
+        <p>Signed in as <b id="b"></b></p>
+        <div class="funcoes">
+            <a href=""><img src="" alt=""><h1></h1></a>
         </div>
     </div>
 
@@ -34,18 +41,5 @@
 </body>
 </html>
 
-<script>
+<script src="./dashboard.js"></script>
 
-    var selecao = sessionStorage.getItem("FK_SELECAO");
-    var idolo = sessionStorage.getItem("FK_IDOLO");
-
-    function dash() {
-
-        
-
-    }
-
-    window.onload = function() {
-        dash()
-    };
-</script>
