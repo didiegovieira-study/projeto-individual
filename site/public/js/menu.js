@@ -1,11 +1,11 @@
 
 function menu() {
-    var list = document.querySelector(".nav-list")
+    var list = document.querySelector(".navList")
 
     list.classList.toggle('ativo')
     console.log(list)
 
-    let menu = document.querySelector(".mobile-menu")
+    let menu = document.querySelector(".mobileMenu")
 
     menu.classList.toggle('menu2')
 }

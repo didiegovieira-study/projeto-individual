@@ -24,7 +24,7 @@
                 <span class="dot3"></span>
             </div>
             <div class="formulario">
-                <div class="title-description">
+                <div class="titleDescription">
                     <div class="back">
                         <h1>Seja bem-vindo!</h1>
                         <a href="./"><img src="./assets/img/login/button-back.png" alt=""></a>
@@ -32,7 +32,7 @@
                     <p>Juntos pela glória eterna!</p>
                 </div>
                 <div class="input">
-                    <div class="div_inputNome">
+                    <div class="divInputNome">
                         <div class="nome">
                             <label for="">Nome:</label>
                             <input type="text" id="inNome" placeholder="Nome">
@@ -42,19 +42,19 @@
                             <input type="text" id="inSobrenome" placeholder="Sobrenome">
                         </div>
                     </div>
-                    <div class="div_input">
+                    <div class="divInput">
                         <label for="">Email:</label>
                         <input type="email" id="inEmail" placeholder="diego.vieira@sptech.school">
                     </div>
-                    <div class="div_input">
+                    <div class="divInput">
                         <label for="">Senha:</label>
                         <input type="password" id="inPass" placeholder="*********">
                     </div>
-                    <div class="div_input">
+                    <div class="divInput">
                         <label for="">Confirmar Senha:</label>
                         <input type="password" id="inPassConfirm" placeholder="*********">
                     </div>
-                    <div class="forgot-password">
+                    <div class="forgotPassword">
                         <div class="forgot">
                             <input type="checkbox">
                             <label for="">Concordo com os <a href="">Termos de Uso</a></label>
@@ -62,7 +62,7 @@
                         <!-- <p>Esqueci a Senha</p> -->
                     </div>
                     <div class="button">
-                        <button class="button-fe" onclick="prosseguir()">PROSSEGUIR</button>
+                        <button class="buttonFe" onclick="prosseguir()">PROSSEGUIR</button>
                     </div>
                 </div>
                         <p>Já tem conta? <a class="a-register" href="./login.html">Logue</a></p>
@@ -75,7 +75,7 @@
                 <span class="dot2"></span>
             </div>
             <div class="formulario">
-                <div class="title-description">
+                <div class="titleDescription">
                     <div class="back">
                         <h1>Seja bem-vindo!</h1>
                         <a onclick="voltar()"><img src="./assets/img/login/button-back.png" alt=""></a>
@@ -84,9 +84,9 @@
                 </div>
                 <div class="input">
                     
-                    <div class="div_input">
+                    <div class="divInput">
                         <label for="">Selecione uma Seleção:</label>
-                        <div class="div_selecao">
+                        <div class="divSelecao">
                             <select name="" id="selSelecao" onchange="selecao()">
                                 <option value="0"></option>
                                 <option value="1">Alemanha</option>
@@ -123,17 +123,17 @@
                                 <option value="32">Uruguai</option>
                             </select>
 
-                            <div class="div_img">
+                            <div class="divImg">
                                 <img id="images" src="./assets/img/selecao/0.png" alt="Flag">
                             </div>
 
                         </div>
                     </div>
                     <br>
-                    <div class="div_input">
+                    <div class="divInput">
                         <label for="">Selecione um idolo:</label>
-                        <div class="div_selecao">
-                            <select name="" id="selIdolo" onchange="">
+                        <div class="divSelecao">
+                            <select name="" id="selIdolo">
                                 <option value="0"></option>
                                 <option value="1">Neymar</option>
                                 <option value="2">Ronaldo Fenomeno</option>
@@ -148,7 +148,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="forgot-password">
+                    <div class="forgotPassword">
                         <div class="forgot">
                             <input type="checkbox">
                             <label for="">Concordo com os <a href="">Termos de Uso</a></label>
@@ -156,7 +156,7 @@
                         <!-- <p>Esqueci a Senha</p> -->
                     </div>
                     <div class="button">
-                        <button class="button-fe" onclick="cadastrar()">CADASTRAR</button>
+                        <button class="buttonFe" onclick="cadastrar()">CADASTRAR</button>
                     </div>
                 </div>
                         <p>Já tem conta? <a class="a-register" href="./login.html">Logue</a></p>
@@ -222,6 +222,8 @@
 
             // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
+            select();
+
             setTimeout(() => {
                 window.location = "login.html";
             }, "2000")
@@ -239,4 +241,15 @@
         return false;
     }
 
+
+    function select() {
+        var sel = selIdolo.value;
+
+        if  (sel == '0') {
+
+        } else {
+            sel.length
+        }
+
+    }
 </script>

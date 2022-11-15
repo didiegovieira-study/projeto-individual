@@ -41,14 +41,14 @@ form {
     gap: 8px;
 }
 
-.div_input, .button {
+.divInput, .button {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 4px;
 }
 
-.forgot-password {
+.forgotPassword {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,30 +61,30 @@ form {
     gap: 8px;
 }
 
-.title-description {
+.titleDescription {
     display: flex;
     gap: 8px;
     flex-direction: column;
 }
 
-.title-description h1 {
+.titleDescription h1 {
     font-size: 24px;
     font-weight: 500;
     color: #2C3333;
 }
 
-.title-description p {
+.titleDescription p {
     font-size: 14px;
     color: #A7A7A7;
 }
 
-.div_input label {
+.divInput label {
     color: #2C3333;
     font-weight: 300;
     font-size: 12px;
 }
 
-.div_input input {
+.divInput input {
     height: 50px;
     border: none;
     background-color: #F5F5F5;
@@ -94,23 +94,23 @@ form {
     outline: 0;
 }
 
-.div_input input:focus {
+.divInput input:focus {
     border: solid 1px #353a3a6e;
 }
 
-.forgot-password .forgot label {
+.forgotPassword .forgot label {
     font-size: 12px;
     font-weight: 300;
     color: #2C3333;
 }
 
-.forgot-password p {
+.forgotPassword p {
     font-size: 12px;
     font-weight: 500;
     color: #2C3333;
 }
 
-.button-fe {
+.buttonFe {
     height: 40px;
     border: none;
     background-color: #2666CF;
@@ -122,7 +122,7 @@ form {
     cursor: pointer;
 }
 
-.button-fe:hover {
+.buttonFe:hover {
     opacity: 0.95;
 }
 
@@ -137,7 +137,7 @@ a {
     color: purple;
 }
 
-.p-senha:hover {
+.pSenha:hover {
     opacity: 0.8;
     cursor: pointer;
 }

@@ -22,7 +22,7 @@
 
         <div class="box">
             <div class="formulario">
-                <div class="title-description">
+                <div class="titleDescription">
                     <div class="back">
                         <h1>Seja bem-vindo!</h1>
                         <a href="./"><img src="./assets/img/login/button-back.png" alt=""></a>
@@ -30,23 +30,23 @@
                     <p>Juntos pela glória eterna!</p>
                 </div>
                 <div class="input">
-                    <div class="div_input">
+                    <div class="divInput">
                         <label for="">Email:</label>
                         <input type="email" id="inEmail" placeholder="diego.vieira@sptech.school">
                     </div>
-                    <div class="div_input">
+                    <div class="divInput">
                         <label for="">Senha:</label>
                         <input type="password" id="inPass" placeholder="*********">
                     </div>
-                    <div class="forgot-password">
+                    <div class="forgotPassword">
                         <div class="forgot">
                             <input type="checkbox">
                             <label for="">Remember me</label>
                         </div>
-                        <p class="p-senha">Esqueci a Senha</p>
+                        <p class="pSenha">Esqueci a Senha</p>
                     </div>
                     <div class="button">
-                        <button class="button-fe" onclick="entrar()">LOGAR</button>
+                        <button class="buttonFe" onclick="entrar()">LOGAR</button>
                     </div>
                 </div>
                         <p>Não tem conta? <a class="a-register" href="./cadastro.html">Cadastre-se </a> </p>
@@ -102,6 +102,8 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.FK_SELECAO = json.fkSelecao;
+                    sessionStorage.FK_IDOLO = json.fkIdolo;
 
                     setTimeout(function () {
                         window.location = "./dashboard/dashboard.html";
