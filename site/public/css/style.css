@@ -123,7 +123,7 @@ h2 {
 }
 
 
-main img {
+.imgJogador {
     position: absolute;
     bottom: -2rem;
     left: 20rem;
@@ -148,11 +148,12 @@ main img {
 .mascara {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .mascara h1 {
@@ -167,9 +168,50 @@ main img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 500px;
+    gap: 50px;
 }
 
-a:hover {
+.vencedores1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vencedores2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vencedores a:hover {
     transform: scale(105%);
+    cursor: pointer;
+}
+
+.box {
+    background-color: #FFFFFF;
+    width: 45vw;
+    height: 60vh;
+    border-radius: 20px;
+    transition: .3s;
+    padding: 20px;
+    color: black;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2) */
+}
+
+
+.box h1, .box p {
+    color: black;
+}
+
+.imgExit {
+    width: 30px;
+    height: 30px;
+    transition: .5s;
+}
+
+.imgExit:hover {
+    transform: scale(110%);
+    cursor: pointer;
 }
