@@ -146,22 +146,23 @@ h2 {
 .mascara {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(8px);
+    /* backdrop-filter: blur(8px); */
 }
 
 .mascara h1 {
     font-size: 50px;
     font-weight: 200;
+    color: black;
 }
 
 .mascara p {
-    color: #FFFFFF;
+    color: black;
     font-weight: 100;
 }
 
@@ -184,20 +185,25 @@ h2 {
     align-items: center;
 }
 
+.vencedores2 a, .vencedores1 a {
+    color: black;
+}
+
 .vencedores a:hover {
     transform: scale(105%);
     cursor: pointer;
 }
 
 .box {
-    background-color: #FFFFFF;
+    
     width: 45vw;
     height: 60vh;
     border-radius: 20px;
     transition: .3s;
     padding: 20px;
     color: black;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+    background-color: hsla(0, 0%, 100%, 0.8);
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
     /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2) */
     opacity: 0.8;
 }
@@ -228,13 +234,13 @@ h2 {
 
 .screen {
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     background-image: url(../assets/img/background/background.jpg);
 }
 
 .screen2 {
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     padding: 70px;
     padding-top: 100px;
     display: flex;
@@ -278,4 +284,67 @@ h2 {
     height: 100%;
     overflow: auto;
     padding: 10px;
+}
+
+
+.tabela {
+    width: 250px;
+    height: 35vh;
+    background-color: hsla(0, 0%, 100%, 0.9);
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: auto;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.tabela::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+}
+
+.tabela::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+.tabela::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+
+.jogo {
+    margin-bottom: 10px;
+    background-color: hsla(0, 0%, 100%, 0.9);
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
+    width: 100%;
+    height: 8vh;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.jogo p{
+    color: black;
+    font-size: 10px;
+    margin: 0;
+}
+
+.selecao p {
+    /* font-size: 10px; */
+    margin: 0;
+}
+
+.hora p {
+    margin: 0;
+}
+
+
+.dia, .selecao, .hora {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
