@@ -29,6 +29,8 @@
     border-radius: 10px;
     color: white;
     padding: 15px;
+    border: 1px solid white;
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
 }
 
 .screen {
@@ -40,4 +42,43 @@
 .divProfile {
     display: flex;
     gap: 10px;
+}
+
+.funcoes {
+    margin-top: 10px;
+    border-top: 1px solid white;
+}
+
+.logout{
+    margin-top: 140px;
+    border-top: 1px solid white;
+}
+
+.funcoes p, .logout p{
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.funcoes p:hover, .logout p:hover{
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    background-color: white;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    text-shadow:0 20px 50px 3px rgb(47 47 47 / 11%);
+}
+
+a {
+    text-decoration: none;
 }
