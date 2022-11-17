@@ -20,12 +20,30 @@
 
     function dash() {
         
-
-        imgSelecao.src = `${selecao}`
         
 
     }
 
+    function dados() {
+        var imgs = document.querySelector('#imgSelecao')
+
+        fetch("/selecao/selecao").then(function (resposta) {
+            if (resposta.ok) {
+                console.log(resposta)
+
+                resposta.json().then(function (response) {
+                    console.log(response[selecao-1].imagem);
+                    var bandeira = response[selecao-1].imagem;
+                    imgs.src = `${bandeira}`;
+
+                    divSelecao.innerHTML = `<img id="imgSelecao" src="${bandeira}" alt="bandeira">`
+                })
+
+            }
+        });
+
+    }
+
     window.onload = function() {
-        dash()
+        dash(); dados()
     };
