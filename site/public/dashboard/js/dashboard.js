@@ -369,12 +369,12 @@
                                     </div>
                                 </div>
                             </div>`;
-                    } else if (selecao == 20 || selecao == 25 || selecao == 16 || selecao == 21) {
+                    } else if (selecao == 17 || selecao == 13 || selecao == 4 || selecao == 31) {
                         tabela.innerHTML = `
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">
-                                        <p>Grupo B</p>
+                                        <p>Grupo D</p>
                                     </div>
                                     <div class="parametro">
                                         <b>PG</b>
@@ -395,8 +395,8 @@
                                                 <p>1º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[20-1].imagem}" alt=""> 
-                                                <p>${response[20-1].nome}</p>
+                                                <img id="imgLine" src="${response[17-1].imagem}" alt=""> 
+                                                <p>${response[17-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -417,8 +417,8 @@
                                                 <p>2º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[25-1].imagem}" alt=""> 
-                                                <p>${response[25-1].nome}</p>
+                                                <img id="imgLine" src="${response[13-1].imagem}" alt=""> 
+                                                <p>${response[13-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -439,8 +439,8 @@
                                                 <p>3º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[16-1].imagem}" alt=""> 
-                                                <p>${response[16-1].nome}</p>
+                                                <img id="imgLine" src="${response[4-1].imagem}" alt=""> 
+                                                <p>${response[4-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -461,8 +461,8 @@
                                                 <p>4º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[21-1].imagem}" alt=""> 
-                                                <p>${response[21-1].nome}</p>
+                                                <img id="imgLine" src="${response[31-1].imagem}" alt=""> 
+                                                <p>${response[31-1].nome}</p>
                                             </div>
                                             
                                         </div>
@@ -480,12 +480,12 @@
                                     </div>
                                 </div>
                             </div>`;
-                    } else if (selecao == 20 || selecao == 25 || selecao == 16 || selecao == 21) {
+                    } else if (selecao == 15 || selecao == 1 || selecao == 22 || selecao == 11) {
                         tabela.innerHTML = `
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">
-                                        <p>Grupo B</p>
+                                        <p>Grupo E</p>
                                     </div>
                                     <div class="parametro">
                                         <b>PG</b>
@@ -506,8 +506,8 @@
                                                 <p>1º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[20-1].imagem}" alt=""> 
-                                                <p>${response[20-1].nome}</p>
+                                                <img id="imgLine" src="${response[15-1].imagem}" alt=""> 
+                                                <p>${response[15-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -528,8 +528,8 @@
                                                 <p>2º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[25-1].imagem}" alt=""> 
-                                                <p>${response[25-1].nome}</p>
+                                                <img id="imgLine" src="${response[1-1].imagem}" alt=""> 
+                                                <p>${response[1-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -550,8 +550,8 @@
                                                 <p>3º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[16-1].imagem}" alt=""> 
-                                                <p>${response[16-1].nome}</p>
+                                                <img id="imgLine" src="${response[22-1].imagem}" alt=""> 
+                                                <p>${response[22-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -572,8 +572,8 @@
                                                 <p>4º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[21-1].imagem}" alt=""> 
-                                                <p>${response[21-1].nome}</p>
+                                                <img id="imgLine" src="${response[11-1].imagem}" alt=""> 
+                                                <p>${response[11-1].nome}</p>
                                             </div>
                                             
                                         </div>
@@ -591,12 +591,12 @@
                                     </div>
                                 </div>
                             </div>`;
-                    } else if (selecao == 20 || selecao == 25 || selecao == 16 || selecao == 21) {
+                    } else if (selecao == 12 || selecao == 23 || selecao == 5 || selecao == 8) {
                         tabela.innerHTML = `
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">
-                                        <p>Grupo B</p>
+                                        <p>Grupo F</p>
                                     </div>
                                     <div class="parametro">
                                         <b>PG</b>
@@ -617,8 +617,8 @@
                                                 <p>1º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[20-1].imagem}" alt=""> 
-                                                <p>${response[20-1].nome}</p>
+                                                <img id="imgLine" src="${response[12-1].imagem}" alt=""> 
+                                                <p>${response[12-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -639,8 +639,8 @@
                                                 <p>2º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[25-1].imagem}" alt=""> 
-                                                <p>${response[25-1].nome}</p>
+                                                <img id="imgLine" src="${response[23-1].imagem}" alt=""> 
+                                                <p>${response[23-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -661,8 +661,8 @@
                                                 <p>3º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[16-1].imagem}" alt=""> 
-                                                <p>${response[16-1].nome}</p>
+                                                <img id="imgLine" src="${response[5-1].imagem}" alt=""> 
+                                                <p>${response[5-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -683,8 +683,8 @@
                                                 <p>4º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[21-1].imagem}" alt=""> 
-                                                <p>${response[21-1].nome}</p>
+                                                <img id="imgLine" src="${response[8-1].imagem}" alt=""> 
+                                                <p>${response[8-1].nome}</p>
                                             </div>
                                             
                                         </div>
@@ -702,12 +702,12 @@
                                     </div>
                                 </div>
                             </div>`;
-                    } else if (selecao == 20 || selecao == 25 || selecao == 16 || selecao == 21) {
+                    } else if (selecao == 6 || selecao == 30 || selecao == 29 || selecao == 7) {
                         tabela.innerHTML = `
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">
-                                        <p>Grupo B</p>
+                                        <p>Grupo G</p>
                                     </div>
                                     <div class="parametro">
                                         <b>PG</b>
@@ -728,8 +728,8 @@
                                                 <p>1º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[20-1].imagem}" alt=""> 
-                                                <p>${response[20-1].nome}</p>
+                                                <img id="imgLine" src="${response[6-1].imagem}" alt=""> 
+                                                <p>${response[6-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -750,8 +750,8 @@
                                                 <p>2º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[25-1].imagem}" alt=""> 
-                                                <p>${response[25-1].nome}</p>
+                                                <img id="imgLine" src="${response[30-1].imagem}" alt=""> 
+                                                <p>${response[30-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -772,8 +772,8 @@
                                                 <p>3º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[16-1].imagem}" alt=""> 
-                                                <p>${response[16-1].nome}</p>
+                                                <img id="imgLine" src="${response[29-1].imagem}" alt=""> 
+                                                <p>${response[29-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -794,8 +794,8 @@
                                                 <p>4º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[21-1].imagem}" alt=""> 
-                                                <p>${response[21-1].nome}</p>
+                                                <img id="imgLine" src="${response[7-1].imagem}" alt=""> 
+                                                <p>${response[7-1].nome}</p>
                                             </div>
                                             
                                         </div>
@@ -813,12 +813,12 @@
                                     </div>
                                 </div>
                             </div>`;
-                    } else if (selecao == 20 || selecao == 25 || selecao == 16 || selecao == 21) {
+                    } else if (selecao == 27 || selecao == 32 || selecao == 10 || selecao == 18) {
                         tabela.innerHTML = `
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">
-                                        <p>Grupo B</p>
+                                        <p>Grupo H</p>
                                     </div>
                                     <div class="parametro">
                                         <b>PG</b>
@@ -839,8 +839,8 @@
                                                 <p>1º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[20-1].imagem}" alt=""> 
-                                                <p>${response[20-1].nome}</p>
+                                                <img id="imgLine" src="${response[27-1].imagem}" alt=""> 
+                                                <p>${response[27-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -861,8 +861,8 @@
                                                 <p>2º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[25-1].imagem}" alt=""> 
-                                                <p>${response[25-1].nome}</p>
+                                                <img id="imgLine" src="${response[32-1].imagem}" alt=""> 
+                                                <p>${response[32-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -883,8 +883,8 @@
                                                 <p>3º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[16-1].imagem}" alt=""> 
-                                                <p>${response[16-1].nome}</p>
+                                                <img id="imgLine" src="${response[10-1].imagem}" alt=""> 
+                                                <p>${response[10-1].nome}</p>
                                             </div>
                                         </div>
                                         <div class="lineCount">
@@ -905,8 +905,8 @@
                                                 <p>4º</p>
                                             </div>
                                             <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[21-1].imagem}" alt=""> 
-                                                <p>${response[21-1].nome}</p>
+                                                <img id="imgLine" src="${response[18-1].imagem}" alt=""> 
+                                                <p>${response[18-1].nome}</p>
                                             </div>
                                             
                                         </div>
