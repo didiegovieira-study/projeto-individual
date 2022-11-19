@@ -104,12 +104,14 @@ a {
 
 .bandeirao img {
     width: 250px;
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
+    border-radius: 3px;
 }
 
 .tabela {
     height: 100%;
     width: 35vw;
-    background-color: wheat;
+    /* background-color: wheat; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,12 +120,35 @@ a {
 .tabela2 {
     width: 400px;
     height: 250px;
-    background-color: bisque;
+    background-color: white;
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
+    border-radius: 3px;
+    padding: 10px;
 }
 
 .topo {
+    width: 100%;
+    height: 30px;
     display: flex;
     justify-content: space-between;
+    border-bottom: 2px solid rgb(218, 218, 218);
+}
+
+.grupo {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.parametro {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    font-size: 10px;
+    /* align-items: center; */
+    font-weight: 100;
+    text-align: center;
+    margin-top: 3px;
 }
 
 .corpo {
@@ -131,15 +156,88 @@ a {
     height: 100%;
 }
 
-.line1 {
+.line {
     width: 100%;
-    height: 100px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    align-items: center;
+}
+
+.lineBody {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+}
+
+#number {
+    width: 2vw;
+    height: 100%;
+    border-right: 2px solid rgb(218, 218, 218);
+    margin-right: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+#imgLine {
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+}
+
+#tabelaSel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.lineCount {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    font-size: 10px;
+    align-items: center;
+    font-weight: 100;
 }
 
 .jogos {
     height: 100%;
     width: 35vw;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jogos2 {
+    width: 33vw;
+    height: 39vh;
     background-color: white;
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
+    border-radius: 3px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+}
+
+.jogos3 {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
+    border-radius: 3px;
+    /* padding: 10px; */
+    
 }

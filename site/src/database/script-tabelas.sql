@@ -44,7 +44,7 @@ INSERT INTO selecao (nome, imagem) VALUES
 	('Gana', '../assets/img/selecao/18.png'),
 	('Holanda', '../assets/img/selecao/19.png'),
 	('Inglaterra', '../assets/img/selecao/20.png'),
-	('Irá', '../assets/img/selecao/21.png'),
+	('Irã', '../assets/img/selecao/21.png'),
 	('Japão', '../assets/img/selecao/22.png'),
 	('Marrocos', '../assets/img/selecao/23.png'),
 	('México', '../assets/img/selecao/24.png'),
