@@ -38,7 +38,7 @@
                     bandeirao.src = `${bandeira}`
 
                     if (selecao == 3 || selecao == 24 || selecao == 26 || selecao == 2) {
-                        
+
                             jogos.innerHTML = `<div class="jogos2">
                             <div class="jogos3">
                                 <div class="jogos3-hora">
@@ -268,6 +268,124 @@
                             </div>`;
 
                     } else if (selecao == 19 || selecao == 14 || selecao == 28 || selecao == 9) {
+                                                
+                        jogos.innerHTML = `<div class="jogos2">
+                        <div class="jogos3">
+                            <div class="jogos3-hora">
+                                <p>07h00</p>
+                            </div>
+                            <div class="jogos3-selecao">
+                                <p class="p1">${response[3-1].nome}</p>
+                                <div class="jogos3-selecaoImg">
+                                    <img src="${response[3-1].imagem}" alt="">
+                                    <span><p>x</p></span>
+                                    <img src="${response[2-1].imagem}" alt="">
+                                </div>
+                                <p class="p2">${response[2-1].nome}</p>
+                            </div>
+                            <div class="jogos3-dia">
+                                <p>Terça, 22 de Nov.</p>
+                                <span><p>Grupo C - Jogo 0</p></span>
+                                <span><p>Lusail Iconic</p></span>
+                            </div>
+                        </div>
+                        <div class="jogos3">
+                            <div class="jogos3-hora">
+                                <p>13h00</p>
+                            </div>
+                            <div class="jogos3-selecao">
+                                <p class="p1">${response[24-1].nome}</p>
+                                <div class="jogos3-selecaoImg">
+                                    <img src="${response[24-1].imagem}" alt="">
+                                    <span><p>x</p></span>
+                                    <img src="${response[26-1].imagem}" alt="">
+                                </div>
+                                <p class="p2">${response[26-1].nome}</p>
+                            </div>
+                            <div class="jogos3-dia">
+                                <p>Terça, 22 de Nov.</p>
+                                <span><p>Grupo C - Jogo 7</p></span>
+                                <span><p>Stadium 974</p></span>
+                            </div>
+                        </div>
+                        <div class="jogos3">
+                                <div class="jogos3-hora">
+                                <p>10h00</p>
+                            </div>
+                            <div class="jogos3-selecao">
+                                <p class="p1">${response[26-1].nome}</p>
+                                <div class="jogos3-selecaoImg">
+                                    <img src="${response[26-1].imagem}" alt="">
+                                    <span><p>x</p></span>
+                                    <img src="${response[2-1].imagem}" alt="">
+                                </div>
+                                <p class="p2">${response[2-1].nome}</p>
+                            </div>
+                            <div class="jogos3-dia">
+                                <p>Sabado, 26 de Nov.</p>
+                                <span><p>Grupo C - Jogo 22</p></span>
+                                <span><p>Cidade da Educação</p></span>
+                            </div>
+                        </div>
+                        <div class="jogos3">
+                            <div class="jogos3-hora">
+                                <p>16h00</p>
+                            </div>
+                            <div class="jogos3-selecao">
+                                <p class="p1">${response[3-1].nome}</p>
+                                <div class="jogos3-selecaoImg">
+                                    <img src="${response[3-1].imagem}" alt="">
+                                    <span><p>x</p></span>
+                                    <img src="${response[24-1].imagem}" alt="">
+                                </div>
+                                <p class="p2">${response[24-1].nome}</p>
+                            </div>
+                            <div class="jogos3-dia">
+                                <p>Sabado, 26 de Nov.</p>
+                                <span><p>Grupo C - Jogo 24</p></span>
+                                <span><p>Lusail Iconic</p></span>
+                            </div>
+                        </div>
+                        <div class="jogos3">
+                            <div class="jogos3-hora">
+                                <p>16h00</p>
+                            </div>
+                            <div class="jogos3-selecao">
+                                <p class="p1">${response[26-1].nome}</p>
+                                <div class="jogos3-selecaoImg">
+                                    <img src="${response[26-1].imagem}" alt="">
+                                    <span><p>x</p></span>
+                                    <img src="${response[3-1].imagem}" alt="">
+                                </div>
+                                <p class="p2">${response[3-1].nome}</p>
+                            </div>
+                            <div class="jogos3-dia">
+                                <p>Quarta, 30 de Nov.</p>
+                                <span><p>Grupo C - Jogo 39</p></span>
+                                <span><p>Stadium 974</p></span>
+                            </div>
+                        </div>
+                        <div class="jogos3">
+                            <div class="jogos3-hora">
+                                <p>16h00</p>
+                            </div>
+                            <div class="jogos3-selecao">
+                                <p class="p1">${response[2-1].nome}</p>
+                                <div class="jogos3-selecaoImg">
+                                    <img src="${response[2-1].imagem}" alt="">
+                                    <span><p>x</p></span>
+                                    <img src="${response[24-1].imagem}" alt="">
+                                </div>
+                                <p class="p2">${response[24-1].nome}</p>
+                            </div>
+                            <div class="jogos3-dia">
+                                <p>Quarta, 30 de Nov.</p>
+                                <span><p>Grupo C - Jogo 40</p></span>
+                                <span><p>Lusail Iconic</p></span>
+                            </div>
+                        </div>
+                    </div>`
+
                         tabela.innerHTML = `
                             <div class="tabela2">
                                 <div class="topo">
@@ -379,6 +497,124 @@
                                 </div>
                             </div>`;
                     } else if (selecao == 20 || selecao == 25 || selecao == 16 || selecao == 21) {
+                                                
+                        jogos.innerHTML = `<div class="jogos2">
+                        <div class="jogos3">
+                            <div class="jogos3-hora">
+                                <p>07h00</p>
+                            </div>
+                            <div class="jogos3-selecao">
+                                <p class="p1">${response[3-1].nome}</p>
+                                <div class="jogos3-selecaoImg">
+                                    <img src="${response[3-1].imagem}" alt="">
+                                    <span><p>x</p></span>
+                                    <img src="${response[2-1].imagem}" alt="">
+                                </div>
+                                <p class="p2">${response[2-1].nome}</p>
+                            </div>
+                            <div class="jogos3-dia">
+                                <p>Terça, 22 de Nov.</p>
+                                <span><p>Grupo C - Jogo 0</p></span>
+                                <span><p>Lusail Iconic</p></span>
+                            </div>
+                        </div>
+                        <div class="jogos3">
+                            <div class="jogos3-hora">
+                                <p>13h00</p>
+                            </div>
+                            <div class="jogos3-selecao">
+                                <p class="p1">${response[24-1].nome}</p>
+                                <div class="jogos3-selecaoImg">
+                                    <img src="${response[24-1].imagem}" alt="">
+                                    <span><p>x</p></span>
+                                    <img src="${response[26-1].imagem}" alt="">
+                                </div>
+                                <p class="p2">${response[26-1].nome}</p>
+                            </div>
+                            <div class="jogos3-dia">
+                                <p>Terça, 22 de Nov.</p>
+                                <span><p>Grupo C - Jogo 7</p></span>
+                                <span><p>Stadium 974</p></span>
+                            </div>
+                        </div>
+                        <div class="jogos3">
+                                <div class="jogos3-hora">
+                                <p>10h00</p>
+                            </div>
+                            <div class="jogos3-selecao">
+                                <p class="p1">${response[26-1].nome}</p>
+                                <div class="jogos3-selecaoImg">
+                                    <img src="${response[26-1].imagem}" alt="">
+                                    <span><p>x</p></span>
+                                    <img src="${response[2-1].imagem}" alt="">
+                                </div>
+                                <p class="p2">${response[2-1].nome}</p>
+                            </div>
+                            <div class="jogos3-dia">
+                                <p>Sabado, 26 de Nov.</p>
+                                <span><p>Grupo C - Jogo 22</p></span>
+                                <span><p>Cidade da Educação</p></span>
+                            </div>
+                        </div>
+                        <div class="jogos3">
+                            <div class="jogos3-hora">
+                                <p>16h00</p>
+                            </div>
+                            <div class="jogos3-selecao">
+                                <p class="p1">${response[3-1].nome}</p>
+                                <div class="jogos3-selecaoImg">
+                                    <img src="${response[3-1].imagem}" alt="">
+                                    <span><p>x</p></span>
+                                    <img src="${response[24-1].imagem}" alt="">
+                                </div>
+                                <p class="p2">${response[24-1].nome}</p>
+                            </div>
+                            <div class="jogos3-dia">
+                                <p>Sabado, 26 de Nov.</p>
+                                <span><p>Grupo C - Jogo 24</p></span>
+                                <span><p>Lusail Iconic</p></span>
+                            </div>
+                        </div>
+                        <div class="jogos3">
+                            <div class="jogos3-hora">
+                                <p>16h00</p>
+                            </div>
+                            <div class="jogos3-selecao">
+                                <p class="p1">${response[26-1].nome}</p>
+                                <div class="jogos3-selecaoImg">
+                                    <img src="${response[26-1].imagem}" alt="">
+                                    <span><p>x</p></span>
+                                    <img src="${response[3-1].imagem}" alt="">
+                                </div>
+                                <p class="p2">${response[3-1].nome}</p>
+                            </div>
+                            <div class="jogos3-dia">
+                                <p>Quarta, 30 de Nov.</p>
+                                <span><p>Grupo C - Jogo 39</p></span>
+                                <span><p>Stadium 974</p></span>
+                            </div>
+                        </div>
+                        <div class="jogos3">
+                            <div class="jogos3-hora">
+                                <p>16h00</p>
+                            </div>
+                            <div class="jogos3-selecao">
+                                <p class="p1">${response[2-1].nome}</p>
+                                <div class="jogos3-selecaoImg">
+                                    <img src="${response[2-1].imagem}" alt="">
+                                    <span><p>x</p></span>
+                                    <img src="${response[24-1].imagem}" alt="">
+                                </div>
+                                <p class="p2">${response[24-1].nome}</p>
+                            </div>
+                            <div class="jogos3-dia">
+                                <p>Quarta, 30 de Nov.</p>
+                                <span><p>Grupo C - Jogo 40</p></span>
+                                <span><p>Lusail Iconic</p></span>
+                            </div>
+                        </div>
+                    </div>`
+                    
                         tabela.innerHTML = `
                             <div class="tabela2">
                                 <div class="topo">
