@@ -1886,7 +1886,10 @@
                 
 
     function ranking() {
-        var info = document.querySelector('.info')
+        var circle1 = document.querySelector('.circle1');
+        var circle2 = document.querySelector('.circle2');
+        var circle3 = document.querySelector('.circle3');
+        var table2 = document.querySelector('.table2');
 
         fetch("/ranking/ranking").then(function (resposta2) {
             if (resposta2.ok) {
@@ -1900,9 +1903,44 @@
                         var rank = response2[i].Ranking;
                         var nome = response2[i].nome;
                         var imagem = response2[i].imagem;
-
-                        info.innerHTML += `${nome} - <img src="${imagem}" alt=""> - ${rank} <br>`
                         
+                        if (i == 0) {
+                            circle1.innerHTML = `
+                            <b><p>1º</p></b>
+                            <img src="${imagem}" alt="">
+                            <p>${nome}</p>
+                            <p>Votos: ${rank}</p>`
+                        } else if (i == 1) {
+                            circle2.innerHTML = `
+                            <b><p>2º</p></b>
+                            <img src="${imagem}" alt="">
+                            <p>${nome}</p>
+                            <p>Votos: ${rank}</p>`
+                        } else if (i == 2) {
+                            circle3.innerHTML = `
+                            <b><p>3º</p></b>
+                            <img src="${imagem}" alt="">
+                            <p>${nome}</p>
+                            <p>Votos: ${rank}</p>`
+                        }
+
+
+                        if (i >= 3) {
+                            table2.innerHTML += `
+                            <div class="lineTable">
+                                <p>${i}º</p>
+                                <div class="table2-box">
+                                    <img src="${imagem}" alt="">
+                                    <p>${nome}</p>
+                                    <p>Votos: ${rank}</p>
+                                </div>
+                            </div>`
+                        }
+
+                        if (i == 10) {
+                            break
+                        }
+                                                
                     }
                     
                 })
