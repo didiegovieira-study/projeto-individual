@@ -189,3 +189,10 @@ h2 {
     font-size: 15px;
     font-weight: 100;
 }
+
+.divIdolo p {
+    width: 20vw;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 300;
+}
