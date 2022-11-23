@@ -1950,6 +1950,19 @@
 
     }
 
+    
+    function quiz() {
+        var disciplina = [];
+        
+
+        if (fkQuiz == null) {
+            
+        } else {
+
+        }
+
+    }
+
     window.onload = function() {
-        dados(); ranking()
+        dados(); ranking(); quiz()
     };
