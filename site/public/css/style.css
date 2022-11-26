@@ -129,8 +129,26 @@ h2 {
 
 .imgJogador {
     position: absolute;
-    bottom: -2rem;
+    /* bottom: -2rem; */
+    top: 90px;
     left: 20rem;
+    animation: neymar 2s infinite;
+
+}
+
+@keyframes neymar {
+    0%{
+        top: 80px;
+    }
+
+    50%{
+        top: 90px;
+    }
+
+    100%{
+        top: 80px;
+    }
+
 }
 
 .blackBar .container2 h1{

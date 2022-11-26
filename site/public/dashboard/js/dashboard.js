@@ -1909,30 +1909,30 @@
                             <b><p>1º</p></b>
                             <img src="${imagem}" alt="">
                             <p>${nome}</p>
-                            <p><i>Votos: ${rank}</i></p>`
+                            <p><i>Votos: <b>${rank}</b></i></p>`
                         } else if (i == 1) {
                             circle2.innerHTML = `
                             <b><p>2º</p></b>
                             <img src="${imagem}" alt="">
                             <p>${nome}</p>
-                            <p><i>Votos: ${rank}</i></p>`
+                            <p><i>Votos: <b>${rank}</b></i></p>`
                         } else if (i == 2) {
                             circle3.innerHTML = `
                             <b><p>3º</p></b>
                             <img src="${imagem}" alt="">
                             <p>${nome}</p>
-                            <p><i>Votos: ${rank}</i></p>`
+                            <p><i>Votos: <b>${rank}</b></i></p>`
                         }
 
 
-                        if (i >= 3) {
+                        if (i > 3) {
                             table2.innerHTML += `
                             <div class="lineTable">
                                 <b><p>${i}º</p></b>
                                 <div class="table2-box">
                                     <img src="${imagem}" alt="">
                                     <p>${nome}</p>
-                                    <p><i>Votos: ${rank}</i></p>
+                                    <p><i>Votos: <b>${rank}</b></i></p>
                                 </div>
                             </div>`
                         }
