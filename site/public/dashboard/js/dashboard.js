@@ -1,8 +1,8 @@
 
 
-    var selecao = sessionStorage.getItem("FK_SELECAO");
-    var quiz = sessionStorage.getItem("FK_QUIZ");
-    var nome = sessionStorage.getItem("NOME_USUARIO");
+    var selecao = localStorage.getItem("FK_SELECAO");
+    var quiz = localStorage.getItem("FK_QUIZ");
+    var nome = localStorage.getItem("NOME_USUARIO");
 
     function menu() {
 
@@ -35,8 +35,6 @@
                     imgs.src = `${bandeira}`;
                     // divSelecao.innerHTML = `<img id="imgSelecao" src="${bandeira}" alt="bandeira">`
                     bandeirao.src = `${bandeira}`
-
-                    
 
                     if (selecao == 3 || selecao == 24 || selecao == 26 || selecao == 2) {
 
@@ -1966,26 +1964,8 @@
         });
 
     }
-
-    function quizFunc() {
-        
-
-        fetch("/usuarios/autenticar").then(function (resposta4) {
-            if (resposta4.ok) {
-                console.log(resposta4)
-
-                resposta4.json().then(function (response4) {
-                    console.log(response4[0]);
-                    
-                    
-                })
-
-            }
-        });
-
-    }
     
 
     window.onload = function() {
-        dados(); ranking(); quizFunc()
+        dados(); ranking();
     };

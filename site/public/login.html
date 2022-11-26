@@ -105,11 +105,11 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.idUsuario;
-                    sessionStorage.FK_SELECAO = json.fkSelecao;
-                    sessionStorage.FK_QUIZ = json.fkQuiz;
+                    localStorage.EMAIL_USUARIO = json.email;
+                    localStorage.NOME_USUARIO = json.nome;
+                    localStorage.ID_USUARIO = json.idUsuario;
+                    localStorage.FK_SELECAO = json.fkSelecao;
+                    localStorage.FK_QUIZ = json.fkQuiz;
 
                     setTimeout(function () {
                         window.location = "./dashboard/dashboard.html";
