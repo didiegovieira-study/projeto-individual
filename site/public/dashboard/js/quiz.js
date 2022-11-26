@@ -1,6 +1,7 @@
 
-    var quiz = sessionStorage.getItem("FK_QUIZ");
-
-    function quiz() {
-    
+function quizFunc() {
+    if (quiz == null) {
+        console.log(`${quiz[0]}`)
     }
+}
+

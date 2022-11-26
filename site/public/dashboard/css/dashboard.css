@@ -143,6 +143,7 @@ a {
     width: 200px;
     box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
     border-radius: 3px;
+    object-fit: cover;
 }
 
 .tabela {
@@ -238,6 +239,7 @@ a {
     width: 25px;
     height: 25px;
     border-radius: 50px;
+    object-fit: cover;
 }
 
 #tabelaSel {
@@ -367,6 +369,7 @@ a {
     width: 25px;
     height: 25px;
     border-radius: 50px;
+    object-fit: cover;
 }
 
 .jogos3-dia {

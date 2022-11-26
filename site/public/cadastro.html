@@ -184,10 +184,10 @@
     var senhaVar = inPass.value;
     var confirmacaoSenhaVar = inPassConfirm.value;
     var selecaoVar = selSelecao.value;
-    var idoloVar = selIdolo.value;
+    // var idoloVar = selIdolo.value;
     
 
-    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || sobreVar == "" || selecaoVar == '0' || idoloVar == '0') {
+    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || sobreVar == "" || selecaoVar == '0') {
         // cardErro.style.display = "block"
         // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
         alert('Não foi possível realizar o cadastro, verifique as credenciais!')
@@ -212,7 +212,7 @@
             emailServer: emailVar,
             senhaServer: senhaVar,
             selecaoServer: selecaoVar,
-            idoloServer: idoloVar,
+            // idoloServer: idoloVar,
         })
     }).then(function (resposta) {
 
@@ -243,15 +243,4 @@
         return false;
     }
 
-
-    function select() {
-        var sel = selIdolo.value;
-
-        if  (sel == '0') {
-
-        } else {
-            sel.length
-        }
-
-    }
 </script>

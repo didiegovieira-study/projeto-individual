@@ -1967,19 +1967,25 @@
 
     }
 
-    
-    function quiz() {
-        var disciplina = [];
+    function quizFunc() {
         
 
-        if (fkQuiz == null) {
-            
-        } else {
+        fetch("/usuarios/autenticar").then(function (resposta4) {
+            if (resposta4.ok) {
+                console.log(resposta4)
 
-        }
+                resposta4.json().then(function (response4) {
+                    console.log(response4[0]);
+                    
+                    
+                })
+
+            }
+        });
 
     }
+    
 
     window.onload = function() {
-        dados(); ranking(); quiz()
+        dados(); ranking(); quizFunc()
     };

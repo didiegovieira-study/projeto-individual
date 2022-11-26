@@ -12,14 +12,15 @@ CREATE TABLE quizPersonagem (
 );
 
 CREATE TABLE selecaoImagem (
-	idSelecaoImagem INT,
+	idSelecaoImagem INT PRIMARY KEY,
 	imagem MEDIUMTEXT
 );
 
 CREATE TABLE selecao (
 	idSelecao INT,
 	nome VARCHAR(45),
-	fkImagem INT, FOREIGN KEY (fkImagem) REFERENCES selecaoImagem (idSelecaoImagem),
+	fkImagem INT, 
+    FOREIGN KEY (fkImagem) REFERENCES selecaoImagem (idSelecaoImagem),
 	PRIMARY KEY (idSelecao, fkImagem)
 );
 
@@ -30,7 +31,7 @@ CREATE TABLE usuario (
 	email VARCHAR(45), CONSTRAINT chkEmail CHECK (email LIKE '%@%'),
 	senha VARCHAR(45),
     fkSelecao INT, FOREIGN KEY (fkSelecao) REFERENCES selecao (idSelecao),
-    fkQuiz INT, FOREIGN KEY (fkQuiz) REFERENCES quiz (idQuiz)
+    fkQuiz INT, FOREIGN KEY (fkQuiz) REFERENCES quizPersonagem (idQuiz)
 );
 
 INSERT INTO quizPersonagem VALUES
@@ -105,6 +106,13 @@ INSERT INTO selecao VALUES
 	(31, 'Tunísia', 31), -- 31
 	(32, 'Uruguai', 32); -- 32
 
-INSERT INTO usuario VALUES
-	(),
-	();
+-- Select do Ranking
+SELECT s.nome, COUNT(fkSelecao) 'Ranking', si.imagem FROM usuario as u
+        JOIN selecao as s ON fkSelecao = s.idSelecao 
+        JOIN selecaoImagem as si ON fkImagem = idSelecaoImagem
+        GROUP BY s.nome
+        ORDER BY Ranking DESC;
+
+-- Select das Imagens
+SELECT * FROM selecao JOIN selecaoImagem ON fkImagem = idSelecaoImagem;
+        
