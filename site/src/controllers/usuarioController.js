@@ -47,6 +47,7 @@ function entrar(req, res) {
                         res.status(403).send("Email e/ou senha inválido(s)");
                     } else {
                         res.status(403).send("Mais de um usuário com o mesmo login e senha!");
+                        alert("Mais de um usuário com o mesmo login e senha!");
                     }
                 }
             ).catch(

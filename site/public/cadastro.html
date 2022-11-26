@@ -223,11 +223,12 @@
 
             // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-            select();
-
-            setTimeout(() => {
-                window.location = "login.html";
-            }, "2000")
+            
+            alert('Registrado com Sucesso!')
+            
+            setTimeout(function () {
+                window.location = "./login.html";
+            }, 1000);
             
             /* limparFormulario(); */
             // finalizarAguardar();
@@ -242,5 +243,6 @@
 
         return false;
     }
+
 
 </script>
