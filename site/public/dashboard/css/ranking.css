@@ -8,11 +8,16 @@
     /* padding: 20px; */
 }
 
+.screen {
+    /* background-image: url(../img/SemTítulo-1.png); */
+    background-color: #f1f1f1;
+}
+
 .background2 {
     display: flex;
     flex-direction: column;
-    margin-top: 16vh;
-    height: 92vh;
+    /* margin-top: 8vh; */
+    height: 100%;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -21,14 +26,15 @@
 
 .ranking {
     /* background-color: rgba(0, 0, 0, 0.5); */
-    width: 100%;
-    height: 100%;
+    width: 50vw;
+    height: 85vh;
     border-radius: 10px;
-    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 9%);
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.7);
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
 }
 
 /* .ranking img {
@@ -128,7 +134,7 @@
 
 .table2-box {
     /* background-color: rgba(255, 255, 255, 0.1); */
-    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 1%);
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
     width: 17vw;
     height: 7vh;
     display: flex;

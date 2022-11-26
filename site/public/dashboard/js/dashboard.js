@@ -267,8 +267,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                </div>
-                            </div>`;
+                            </div>
+                        </div>`;
 
                     } else if (selecao == 19 || selecao == 14 || selecao == 28 || selecao == 9) {
                                                 
@@ -390,6 +390,7 @@
                     </div>`
 
                         tabela.innerHTML = `
+                        <div class="tabela1">
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">
@@ -498,7 +499,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>`;
+                            </div>
+                        </div>`;
                     } else if (selecao == 20 || selecao == 25 || selecao == 16 || selecao == 21) {
                                                 
                         jogos.innerHTML = `<div class="jogos2">
@@ -619,6 +621,7 @@
                     </div>`
 
                         tabela.innerHTML = `
+                        <div class="tabela1">
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">
@@ -727,7 +730,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>`;
+                            </div>
+                        </div>`;
                     } else if (selecao == 17 || selecao == 13 || selecao == 4 || selecao == 31) {
                                                 
                         jogos.innerHTML = `<div class="jogos2">
@@ -848,6 +852,7 @@
                     </div>`
                         
                         tabela.innerHTML = `
+                        <div class="tabela1">
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">
@@ -956,7 +961,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>`;
+                            </div>
+                        </div>`;
                     } else if (selecao == 15 || selecao == 1 || selecao == 22 || selecao == 11) {
                                                 
                         jogos.innerHTML = `<div class="jogos2">
@@ -1077,6 +1083,7 @@
                     </div>`
                         
                         tabela.innerHTML = `
+                        <div class="tabela1">
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">
@@ -1185,7 +1192,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>`;
+                            </div>
+                        </div>`;
                     } else if (selecao == 12 || selecao == 23 || selecao == 5 || selecao == 8) {
                                                 
                         jogos.innerHTML = `<div class="jogos2">
@@ -1306,6 +1314,7 @@
                     </div>`
                         
                         tabela.innerHTML = `
+                        <div class="tabela1">
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">
@@ -1414,7 +1423,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>`;
+                            </div>
+                        </div>`;
                     } else if (selecao == 6 || selecao == 30 || selecao == 29 || selecao == 7) {
                                                 
                         jogos.innerHTML = `<div class="jogos2">
@@ -1644,7 +1654,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>`;
+                            </div>
+                        </div>`;
                     } else if (selecao == 27 || selecao == 32 || selecao == 10 || selecao == 18) {
                                                 
                         jogos.innerHTML = `<div class="jogos2">
@@ -1765,6 +1776,7 @@
                     </div>`
                         
                         tabela.innerHTML = `
+                        <div class="tabela1">
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">
@@ -1873,7 +1885,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>`;
+                            </div>
+                        </div>`;
                     }
                     
                 })

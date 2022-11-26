@@ -1,6 +1,4 @@
-.navbar {
-    height: 8vh;
-}
+
 
 .background {
     display: flex;
@@ -10,10 +8,14 @@
     /* padding: 20px; */
 }
 
+/* .screen {
+    background-image: url(../img/SemTítulo-2.png);
+} */
+
 .background2 {
     display: flex;
     flex-direction: column;
-    margin-top: 16vh;
+    margin-top: 8vh;
     height: 92vh;
     justify-content: center;
     align-items: center;
