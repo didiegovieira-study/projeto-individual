@@ -25,7 +25,7 @@
                 <div class="titleDescription">
                     <div class="back">
                         <h1>Seja bem-vindo!</h1>
-                        <a href="./"><img src="./assets/img/login/button-back.png" alt=""></a>
+                        <a href="./"><img src="./assets/img/login/backbutton.png" alt=""></a>
                     </div>
                     <p>Juntos pela glória eterna!</p>
                 </div>
@@ -38,13 +38,17 @@
                         <label for="">Senha:</label>
                         <input type="password" id="inPass" placeholder="*********">
                     </div>
+                    
+                    
                     <div class="forgotPassword">
-                        <div class="forgot">
+                        <!-- <div class="forgot">
                             <input type="checkbox">
                             <label for="">Remember me</label>
                         </div>
-                        <p class="pSenha">Esqueci a Senha</p>
+                        <p class="pSenha">Esqueci a Senha</p> -->
                     </div>
+
+
                     <div class="button">
                         <button class="buttonFe" onclick="entrar()">LOGAR</button>
                     </div>
@@ -116,6 +120,7 @@
             } else {
 
                 console.log("Houve um erro ao tentar realizar o login!");
+                alert('Login ou Senha errado, tente novamente!')
 
                 resposta.text().then(texto => {
                     console.error(texto);

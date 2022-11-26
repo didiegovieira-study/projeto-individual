@@ -27,7 +27,7 @@
                 <div class="titleDescription">
                     <div class="back">
                         <h1>Seja bem-vindo!</h1>
-                        <a href="./"><img src="./assets/img/login/button-back.png" alt=""></a>
+                        <a href="./"><img src="./assets/img/login/backbutton.png" alt=""></a>
                     </div>
                     <p>Juntos pela glória eterna!</p>
                 </div>
@@ -55,10 +55,10 @@
                         <input type="password" id="inPassConfirm" placeholder="*********">
                     </div>
                     <div class="forgotPassword">
-                        <div class="forgot">
+                        <!-- <div class="forgot">
                             <input type="checkbox">
                             <label for="">Concordo com os <a href="">Termos de Uso</a></label>
-                        </div>
+                        </div> -->
                         <!-- <p>Esqueci a Senha</p> -->
                     </div>
                     <div class="button">
@@ -78,7 +78,7 @@
                 <div class="titleDescription">
                     <div class="back">
                         <h1>Seja bem-vindo!</h1>
-                        <a onclick="voltar()"><img src="./assets/img/login/button-back.png" alt=""></a>
+                        <a onclick="voltar()"><img src="./assets/img/login/backbutton.png" alt=""></a>
                     </div>
                     <p>Juntos pela glória eterna!</p>
                 </div>
@@ -130,7 +130,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="divInput">
+                    <!-- <div class="divInput">
                         <label for="">Selecione um idolo:</label>
                         <div class="divSelecao">
                             <select name="" id="selIdolo">
@@ -144,17 +144,16 @@
                                 <option value="7">Puyol</option>
                                 <option value="8">Neuer</option>
                             </select>
-                            
                         </div>
-                    </div>
+                    </div> -->
                     <br>
-                    <div class="forgotPassword">
+                    <!-- <div class="forgotPassword">
                         <div class="forgot">
                             <input type="checkbox">
                             <label for="">Concordo com os <a href="">Termos de Uso</a></label>
                         </div>
-                        <!-- <p>Esqueci a Senha</p> -->
-                    </div>
+                        <p>Esqueci a Senha</p>
+                    </div> -->
                     <div class="button">
                         <button class="buttonFe" onclick="cadastrar()">CADASTRAR</button>
                     </div>
@@ -191,7 +190,7 @@
     if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || sobreVar == "" || selecaoVar == '0' || idoloVar == '0') {
         // cardErro.style.display = "block"
         // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
+        alert('Não foi possível realizar o cadastro, verifique as credenciais!')
         // finalizarAguardar();
         return false;
     }
@@ -233,6 +232,7 @@
             /* limparFormulario(); */
             // finalizarAguardar();
         } else {
+            alert('Não foi possível realizar o cadastro, verifique as credenciais!')
             throw ("Houve um erro ao tentar realizar o cadastro!");
         }
     }).catch(function (resposta) {

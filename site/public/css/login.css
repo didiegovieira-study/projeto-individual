@@ -82,6 +82,7 @@ form {
     color: #2C3333;
     font-weight: 300;
     font-size: 12px;
+    margin-top: 5px;
 }
 
 .divInput input {
@@ -96,6 +97,7 @@ form {
 
 .divInput input:focus {
     border: solid 1px #353a3a6e;
+    color: black;
 }
 
 .forgotPassword .forgot label {

@@ -1,16 +1,21 @@
+
+
 .background {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    
 }
 
 .ranking {
     /* background-color: rgba(0, 0, 0, 0.5); */
-    width: 30vw;
-    height: 80vh;
-    border-radius: 30px;
-    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
-    
+    width: 95vw;
+    height: 85vh;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 9%);
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
     display: flex;
     flex-direction: column;
     padding-top: 20px;
@@ -34,6 +39,7 @@
     align-items: center;
     gap: 10px;
     padding: 20px;
+    /* box-shadow: 0 20px 50px 3px rgb(47 47 47 / 8%); */
 }
 
 .circle1, .circle2, .circle3 {
@@ -112,7 +118,7 @@
 
 .table2-box {
     /* background-color: rgba(255, 255, 255, 0.1); */
-    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 1%);
     width: 17vw;
     height: 7vh;
     display: flex;

@@ -24,6 +24,7 @@
         var bandeirao = document.querySelector('#imgBandeirao')
         var tabela = document.querySelector('.tabela')
         var jogos = document.querySelector('.jogos')
+        
 
         fetch("/selecao/selecao").then(function (resposta) {
             if (resposta.ok) {
@@ -33,9 +34,10 @@
                     console.log(response[selecao-1].imagem);
                     var bandeira = response[selecao-1].imagem;
                     imgs.src = `${bandeira}`;
-
                     // divSelecao.innerHTML = `<img id="imgSelecao" src="${bandeira}" alt="bandeira">`
                     bandeirao.src = `${bandeira}`
+
+                    
 
                     if (selecao == 3 || selecao == 24 || selecao == 26 || selecao == 2) {
 
@@ -157,6 +159,7 @@
                         </div>`
 
                         tabela.innerHTML = `
+                        <div class="tabela1">
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">
@@ -264,6 +267,7 @@
                                             <p>0</p>
                                         </div>
                                     </div>
+                                </div>
                                 </div>
                             </div>`;
 
@@ -1532,6 +1536,7 @@
                     </div>`
                         
                         tabela.innerHTML = `
+                        <div class="tabela1">
                             <div class="tabela2">
                                 <div class="topo">
                                     <div class="grupo">

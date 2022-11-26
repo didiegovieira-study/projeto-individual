@@ -81,6 +81,7 @@ form {
     color: #2C3333;
     font-weight: 300;
     font-size: 12px;
+    margin-top: 5px;
 }
 
 .divInput input, .divInputNome input {
@@ -95,6 +96,7 @@ form {
 
 .divInput input:focus, .divInputNome input:focus {
     border: solid 1px #353a3a6e;
+    color: black;
 }
 
 .forgotPassword .forgot label {
@@ -179,6 +181,7 @@ a {
 .back a img:hover {
     width: 45px;
     transform: translate(-5%, -5%);
+    cursor: pointer;
 }
 
 .dot1, .dot2, .dot3{

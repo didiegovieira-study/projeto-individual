@@ -23,13 +23,13 @@
 .menu {
     width: 200px;
     height: 400px;
-    background-color: rgb(25, 25, 25);
+    background-color: rgb(241, 241, 241);
     border-radius: 10px;
     position: absolute;
     right: 20px;
     top: 55px;
     border-radius: 10px;
-    color: white;
+    color: #252525;
     padding: 15px;
     /* border: 1px solid white; */
     box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
@@ -37,6 +37,7 @@
 
 .menu p {
     font-weight: 100;
+    color: #252525;
 }
 
 .divSelecao {
@@ -77,17 +78,17 @@
 
 .funcoes {
     margin-top: 10px;
-    border-top: 1px solid white;
+    border-top: 1px solid #252525;
 }
 
 .logout{
     margin-top: 140px;
-    border-top: 1px solid white;
+    border-top: 1px solid #252525;
 }
 
 .funcoes p, .logout p{
     text-decoration: none;
-    color: white;
+    color: #252525;
     margin-top: 10px;
     width: 100%;
     height: 30px;
@@ -117,10 +118,22 @@ a {
 
 .bandeirao {
     height: 100%;
-    width: 25vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+}
+
+.bandeirao2 {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 9%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
 
 .bandeirao img {
@@ -131,16 +144,28 @@ a {
 
 .tabela {
     height: 100%;
-    width: 35vw;
+    width: 100%;
     /* background-color: wheat; */
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0px 20px 20px 20px;
+}
+
+.tabela1 {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 9%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
 
 .tabela2 {
     width: 400px;
-    height: 250px;
+    height: 240px;
     background-color: white;
     box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
     border-radius: 3px;
@@ -233,16 +258,19 @@ a {
 
 .jogos {
     height: 100%;
-    width: 40vw;
+    width: 100%;
     /* background-color: white; */
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 9%);
 }
 
 .jogos2 {
     width: 38vw;
-    height: 36vh;
+    height: 60vh;
     background-color: transparent;
     box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
     border-radius: 3px;
@@ -364,5 +392,20 @@ a {
 .backgroundBox1 {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    margin-top: 8vh;
+    height: 92vh;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.backgroundBox2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vh;
+    height: 92vh;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    padding: 20px;
 }
