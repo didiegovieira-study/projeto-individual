@@ -1,9 +1,8 @@
 
 
     var selecao = sessionStorage.getItem("FK_SELECAO");
-    var idolo = sessionStorage.getItem("FK_IDOLO");
+    var quiz = sessionStorage.getItem("FK_QUIZ");
     var nome = sessionStorage.getItem("NOME_USUARIO");
-
 
     function menu() {
 
