@@ -15,7 +15,7 @@
             animation.style.display = 'none'
         }
 
-    }
+    };
 
     function dados() {
 
@@ -34,7 +34,7 @@
                 });
             }
         });
-    }
+    };
 
     function quizFunc() {
 
@@ -43,11 +43,11 @@
                 console.log(resposta2)
 
                 resposta2.json().then(function (response2) {
-                    var quiz = response2[id-1].fkQuiz
+                    var quiz = response2[id-1].fkQuiz;
                     console.log(response2[id-1].fkQuiz);
 
                     if (quiz == undefined) {
-                        alert('Parece que você ainda não tem um personagem, faça o Quiz e receba um!')
+                        // alert('Parece que você ainda não tem um personagem, faça o Quiz e receba um!')
                     } else {
                         
                     }
@@ -55,14 +55,61 @@
                 });
             }
         });
-    }
+    };
 
-    
 
-    function game() {
+    // var valores = [];
+    var valores = [{
+        disciplina: 0, // cr7
+        lealdade: 0, // neuer
+        bondade: 0, // messi
+        respeito: 0, // pelé
+        amor: 0, // kaka
+        ambicao: 0, // neymar
+        responsabilidade: 0 // beckenbeuer
+    }];
 
-    }
+    function game(option) {
+        
+        var choice = document.getElementById('quizChoice');
+        var choice2 = document.getElementById('quizChoice2');
+
+        if (choice.style.display == 'flex') {
+            choice.style.display = 'none'
+            choice2.style.display = 'flex'
+        };
+
+            var evento = option;
+
+            console.log(evento);
+
+            var random = Number(Math.random() * 5);
+
+            if (evento == 'disciplina') {
+                valores.disciplina += random;
+                console.log('ok')
+            } else if (evento == 'lealdade') {
+                valores.lealdade += random;
+                console.log('ok')
+            } else if (evento == 'bondade') {
+                valores.bondade += random;
+                console.log('ok')
+            } else if (evento == 'respeito') {
+                valores.respeito += random;
+                console.log('ok')
+            } else if (evento == 'amor') {
+                valores.amor += random;
+                console.log('ok')
+            } else if (evento == 'ambicao') {
+                valores.ambicao += random;
+                console.log('ok')
+            } else if (evento == 'responsabilidade') {
+                valores.responsabilidade += random;
+                console.log('ok')
+            };
+
+    };
 
     window.onload = function() {
         dados(); quizFunc();
-    }
+    };
