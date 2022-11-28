@@ -39,6 +39,7 @@
     function quizFunc() {
 
         var choice  = document.getElementById('quizChoice');
+        var quizPersonagem  = document.getElementById('quizPersonagem');
 
         fetch("/usuarios/listar").then(function (resposta2) {
             if (resposta2.ok) {
@@ -50,9 +51,29 @@
 
                     if (quiz != undefined) {
                         alert('voce possui personagem')
+                        choice.style.display = 'none'
+                        quizPersonagem.style.display = 'flex'
                     } else {
-                        // alert('Parece que você ainda não tem um personagem, faça o Quiz e receba um!')
+                        alert('Parece que você ainda não tem um personagem, faça o Quiz e receba um!')
+                        choice.style.display = 'flex'
+                        quizPersonagem.style.display = 'none'
                     }
+
+                });
+            }
+        });
+
+        fetch("/quiz/quizListar").then(function (resposta3) {
+            if (resposta3.ok) {
+                console.log(resposta3)
+
+                resposta3.json().then(function (response3) {
+                    // var quiz = response3[id-1].fkQuiz;
+                    // console.log(response3[id-1].fkQuiz);
+
+                    // var idQuiz = response3[id-1].idQuiz;
+
+                    console.log(response3[id-1])
 
                 });
             }
@@ -178,7 +199,48 @@
                 
             };
 
-           
+            function cadastrar() {
+
+                fetch("/quiz/update", {
+            
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+            
+                        quizServer: personagem,
+                        idServer: id
+                    })
+            
+                }).then(function (resposta6) {
+            
+                    console.log("resposta: ", resposta6);
+            
+                    if (resposta6.ok) {
+            
+                        alert('Registrado com Sucesso!')
+                        
+                        /* setTimeout(function () {
+                            window.location = "./login.html";
+                        }, 1000); */
+            
+                    } else {
+            
+                        throw ("Houve um erro ao tentar realizar o cadastro!");
+                    }
+                });
+            
+                var choice8 = document.getElementById('quizChoice8');
+                var quizPersonagem = document.getElementById('quizPersonagem');
+            
+                if (choice8.style.display == 'flex') {
+                    choice8.style.display = 'none'
+                    quizPersonagem.style.display = 'flex'
+                }
+            
+                }
+
             
 
     window.onload = function() {

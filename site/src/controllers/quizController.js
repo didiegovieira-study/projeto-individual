@@ -1,6 +1,6 @@
 var quizModel = require("../models/quizModel");
 
-/* function quizListar(req, res) {
+function quizListar(req, res) {
     quizModel.quizListar()
         .then(function (resultado) {
             if (resultado.length > 0) {
@@ -15,7 +15,7 @@ var quizModel = require("../models/quizModel");
                 res.status(500).json(erro.sqlMessage);
             }
         );
-} */
+}
 
 function quizCadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
@@ -50,6 +50,6 @@ function quizCadastrar(req, res) {
 }
 
 module.exports = {
-    // quizListar,
+    quizListar,
     quizCadastrar
 }
