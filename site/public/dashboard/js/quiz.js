@@ -38,6 +38,8 @@
 
     function quizFunc() {
 
+        var choice  = document.getElementById('quizChoice');
+
         fetch("/usuarios/listar").then(function (resposta2) {
             if (resposta2.ok) {
                 console.log(resposta2)
@@ -46,10 +48,10 @@
                     var quiz = response2[id-1].fkQuiz;
                     console.log(response2[id-1].fkQuiz);
 
-                    if (quiz == undefined) {
-                        // alert('Parece que você ainda não tem um personagem, faça o Quiz e receba um!')
+                    if (quiz != undefined) {
+                        alert('voce possui personagem')
                     } else {
-                        
+                        // alert('Parece que você ainda não tem um personagem, faça o Quiz e receba um!')
                     }
 
                 });
@@ -59,57 +61,127 @@
 
 
     // var valores = [];
-    var valores = [{
-        disciplina: 0, // cr7
-        lealdade: 0, // neuer
-        bondade: 0, // messi
-        respeito: 0, // pelé
-        amor: 0, // kaka
-        ambicao: 0, // neymar
-        responsabilidade: 0 // beckenbeuer
-    }];
+    var valores = [ 
+        {nome: 'disciplina', pontos: 0},  // cr7
+        {nome: 'lealdade', pontos: 0}, // neuer
+        {nome: 'bondade', pontos: 0 }, // messi
+        {nome: 'respeito', pontos: 0 }, // pelé
+        {nome: 'amor', pontos: 0 }, // kaka
+        {nome: 'ambicao', pontos: 0 }, // neymar
+        {nome: 'responsabilidade', pontos: 0} // puyol
+    ];
+
+    var personagem = 0;
 
     function game(option) {
         
-        var choice = document.getElementById('quizChoice');
+        var choice  = document.getElementById('quizChoice');
         var choice2 = document.getElementById('quizChoice2');
+        var choice3 = document.getElementById('quizChoice3');
+        var choice4 = document.getElementById('quizChoice4');
+        var choice5 = document.getElementById('quizChoice5');
+        var choice6 = document.getElementById('quizChoice6');
+        var choice7 = document.getElementById('quizChoice7');
+        var choice8 = document.getElementById('quizChoice8');
 
         if (choice.style.display == 'flex') {
             choice.style.display = 'none'
             choice2.style.display = 'flex'
-        };
+
+        } else if (choice2.style.display == 'flex') {
+            choice2.style.display = 'none'
+            choice3.style.display = 'flex'
+
+        } else if (choice3.style.display == 'flex') {
+            choice3.style.display = 'none'
+            choice4.style.display = 'flex'
+
+        } else if (choice4.style.display == 'flex') {
+            choice4.style.display = 'none'
+            choice5.style.display = 'flex'
+
+        } else if (choice5.style.display == 'flex') {
+            choice5.style.display = 'none'
+            choice6.style.display = 'flex'
+
+        } else if (choice6.style.display == 'flex') {
+            choice6.style.display = 'none'
+            choice7.style.display = 'flex'
+
+        } else if (choice7.style.display == 'flex') {
+            choice7.style.display = 'none'
+            choice8.style.display = 'flex'
+        } 
 
             var evento = option;
 
             console.log(evento);
 
-            var random = Number(Math.random() * 5);
+            var random = Number(1 + Math.random() * 5).toFixed(0);
 
-            if (evento == 'disciplina') {
-                valores.disciplina += random;
-                console.log('ok')
-            } else if (evento == 'lealdade') {
-                valores.lealdade += random;
-                console.log('ok')
-            } else if (evento == 'bondade') {
-                valores.bondade += random;
-                console.log('ok')
-            } else if (evento == 'respeito') {
-                valores.respeito += random;
-                console.log('ok')
-            } else if (evento == 'amor') {
-                valores.amor += random;
-                console.log('ok')
-            } else if (evento == 'ambicao') {
-                valores.ambicao += random;
-                console.log('ok')
-            } else if (evento == 'responsabilidade') {
-                valores.responsabilidade += random;
-                console.log('ok')
+            console.log(random);
+
+                if (evento == 'disciplina') {
+                    valores[0].pontos += Number(random);
+                    console.log('ok')
+
+                } else if (evento == 'lealdade') {
+                    valores[1].pontos += Number(random);
+                    console.log('ok')
+
+                } else if (evento == 'bondade') {
+                    valores[2].pontos += Number(random);
+                    console.log('ok')
+
+                } else if (evento == 'respeito') {
+                    valores[3].pontos += Number(random);
+                    console.log('ok')
+
+                } else if (evento == 'amor') {
+                    valores[4].pontos += Number(random);
+                    console.log('ok')
+
+                } else if (evento == 'ambicao') {
+                    valores[5].pontos += Number(random);
+                    console.log('ok')
+
+                } else if (evento == 'responsabilidade') {
+                    valores[6].pontos += Number(random);
+                    console.log('ok')
+
+                };
+
+                const maior = valores.reduce(function(maior, menor) {
+                    return (maior.pontos > menor.pontos) ? maior:menor
+                });
+
+                console.log(maior);
+
+                // var maiorponto = maior.pontos
+               
+
+                if (maior.nome == 'disciplina') {
+                    personagem = 1;
+                } else if (maior.nome == 'lealdade') {
+                    personagem = 2;
+                } else if (maior.nome == 'bondade') {
+                    personagem = 3;
+                } else if (maior.nome == 'respeito') {
+                    personagem = 4;
+                } else if (maior.nome == 'amor') {
+                    personagem = 5;
+                } else if (maior.nome == 'ambicao') {
+                    personagem = 6;
+                } else if (maior.nome == 'responsabilidade') {
+                    personagem = 7;
+                }
+                
             };
 
-    };
+           
+            
 
     window.onload = function() {
         dados(); quizFunc();
+
     };

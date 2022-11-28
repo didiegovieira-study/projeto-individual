@@ -35,8 +35,13 @@ CREATE TABLE usuario (
 );
 
 INSERT INTO quizPersonagem VALUES
-	(1, 'Cristiano Ronaldo', 'Cristiano Ronaldo dos Santos Aveiro é um futebolista português que atua como extremo-esquerdo ou ponta de lança. Atualmente está sem clube, mas joga pela Seleção Portuguesa, onde é capitão.', 'ST', '37', ''),
-	();
+	(1, 'Cristiano Ronaldo', 'Cristiano Ronaldo dos Santos Aveiro é um futebolista português que atua como extremo-esquerdo ou ponta de lança. Atualmente está sem clube, mas joga pela Seleção Portuguesa, onde é capitão.', 'ST', 37, './img/quiz/cr7.png'),
+	(2, 'Neuer', 'Manuel Peter Neuer é um futebolista alemão que atua como goleiro. Atualmente defende o Bayern de Munique e a Seleção Alemã.', 'GK', 36, './img/quiz/neuer.png'),
+	(3, 'Messi', 'Lionel Andrés Messi Cuccittini é um futebolista argentino que atua como atacante. Atualmente joga pelo Paris Saint-Germain e pela Seleção Argentina, onde é capitão.', 'ST', 35, './img/quiz/messi.png'),
+	(4, 'Pele', 'Edson Arantes do Nascimento, mais conhecido como Pelé, é um ex-futebolista brasileiro que atuava como atacante. Ele é amplamente considerado como um dos maiores atletas de todos os tempos.', 'ST', 82, './img/quiz/pele.png'),
+	(5, 'Kaka', 'Ricardo Izecson dos Santos Leite, mais conhecido como Kaká, é um ex-futebolista brasileiro que atuava como meio-campista.', 'CM', 40, './img/quiz/kaka.png'),
+	(6, 'Neymar', 'Neymar da Silva Santos Júnior, mais conhecido apenas como Neymar, é um futebolista brasileiro que atua como atacante. Atualmente joga pelo Paris Saint-Germain e pela Seleção Brasileira. É considerado o principal futebolista brasileiro da atualidade e um dos melhores futebolistas do mundo.', 'CM', 30, './img/quiz/neymar.png'),
+	(7, 'Puyol', 'Carles Puyol i Saforcada, mais conhecido por Puyol é um ex-futebolista espanhol que atuava como zagueiro.', 'CB', 44, './img/quiz/puyol.png');
 
 INSERT INTO selecaoImagem VALUES
 	(1, '../assets/img/selecao/1.png'), -- 1

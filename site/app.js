@@ -12,6 +12,7 @@ var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
 var selecaoRouter = require("./src/routes/selecao");
 var rankingRouter = require("./src/routes/ranking");
+var quizRouter = require("./src/routes/quiz");
 // var medidasRouter = require("./src/routes/medidas");
 
 app.use(express.json());
@@ -24,6 +25,7 @@ app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/selecao", selecaoRouter);
 app.use("/ranking", rankingRouter);
+app.use("/quiz", quizRouter);
 // app.use("/medidas", medidasRouter)
 
 app.listen(PORTA, function () {

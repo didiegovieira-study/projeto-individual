@@ -112,17 +112,31 @@
                         </div>
 
                         <div class="quizChoice8" style="display: none;" id="quizChoice8">
-                            <h1>Em qual dessas cidades você gostaria de morar no centro?:</h1>
                             <div class="quizBlock">
-                                <a onclick="game('disciplina')"><p>Tokyo</p></a>
+                                <a onclick="cadastrar()"><p>Descobrir Personagem</p></a>
+                            </div>
+                        </div>
+
+                        <div class="quizPersonagem" style="display: none;" id="quizPersonagem">
+                            <div class="quizBox">
+
+                                <div class="quizColor">
+                                    
+                                </div>
+                                <div class="quizInfo">
+                                    <h1>Nome: Cristiano Ronaldo</h1>
+                                    <h1>Idade: 37 Posição: ST</h1>
+                                    <p><b>Descrição:</b> Cristiano Ronaldo dos Santos Aveiro é um futebolista português que atua como extremo-esquerdo ou ponta de lança. Atualmente está sem clube, mas joga pela Seleção Portuguesa, onde é capitão.</p>
+                                </div>
+                                <div class="quizImagem">
+    
+                                </div>
+
                             </div>
                         </div>
 
                     </div>
 
-                    <div class="quizPersonagem" style="display: none;">
-
-                    </div>
 
                 </div>
             </div>
@@ -135,3 +149,52 @@
 <script src="./js/quiz.js"></script>
 
 </html>
+
+<script>
+
+    var id = 1;
+    var personagem = 1;
+
+     function cadastrar() {
+
+                fetch("/quiz/update", {
+            
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+            
+                        quizServer: personagem,
+                        idServer: id
+                    })
+            
+                }).then(function (resposta6) {
+            
+                    console.log("resposta: ", resposta6);
+            
+                    if (resposta6.ok) {
+            
+                        alert('Registrado com Sucesso!')
+                        
+                        /* setTimeout(function () {
+                            window.location = "./login.html";
+                        }, 1000); */
+            
+                    } else {
+            
+                        throw ("Houve um erro ao tentar realizar o cadastro!");
+                    }
+                });
+            
+                var choice8 = document.getElementById('quizChoice8');
+                var quizPersonagem = document.getElementById('quizPersonagem');
+            
+                if (choice8.style.display == 'flex') {
+                    choice8.style.display = 'none'
+                    quizPersonagem.style.display = 'flex'
+                }
+            
+                }
+
+</script>
