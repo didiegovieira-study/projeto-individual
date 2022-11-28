@@ -9,6 +9,7 @@ function selecao() {
     return database.executar(instrucao);
 }
 
+
 module.exports = {
     selecao
 };

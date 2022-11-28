@@ -27,6 +27,7 @@ body {
     width: 100%;
     height: 100vh;
     background-image: url(../assets/img/background/FIFA-world-cup-Russia-2018-wallpaper-20_4d470f76dc99e18ad75087b1b8410ea9.jpg);
+    /* background-color: #f1f1f1; */
     background-size: cover;
 }
 
@@ -137,6 +138,7 @@ h2 {
 }
 
 @keyframes neymar {
+
     0%{
         top: 80px;
     }
@@ -164,7 +166,7 @@ h2 {
 .mascara {
     width: 100%;
     height: 100%;
-    background-color: rgba(241, 241, 241, 0.9);
+    /* background-color: rgba(241, 241, 241, 0.9); */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -194,43 +196,74 @@ h2 {
 .vencedores1 {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+    width: 30vw;
+    height: 70vh;
+    overflow: auto;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: left;
 }
 
-.vencedores2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.vencedores1 h1 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    animation: h1text 4s infinite;
+    font-weight: 500;
 }
 
-.vencedores2 a, .vencedores1 a {
+@keyframes h1text {
+
+    0%{
+        top: 80px;
+    }
+
+    50%{
+        top: 90px;
+    }
+
+    100%{
+        top: 80px;
+    }
+
+}
+
+.vencedores1 a {
     color: #252525;
+    /* color: #f1f1f1; */
 }
 
 .vencedores a:hover {
     transform: scale(105%);
     cursor: pointer;
+    color: #2666CF;
 }
 
 .box {
     
     width: 45vw;
     height: 60vh;
-    border-radius: 20px;
-    transition: .3s;
+    border-radius: 10px;
+    transition: .3s ease-in;
     padding: 20px;
     color: #252525;
-    background-color: hsla(0, 0%, 100%, 0.8);
+    background-color: #f1f1f1;
     box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
     /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2) */
-    opacity: 0.8;
+    /* opacity: 0.8; */
+
 }
 
 
 .box h1, .box p {
     color: #252525;
-    text-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+    /* text-shadow: 0 20px 30px rgba(0, 0, 0, 0.5); */
+    margin-top: 20px;
+    
 }
+
+
 
 .imgExit {
     width: 30px;

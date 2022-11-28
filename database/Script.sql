@@ -21,6 +21,7 @@ CREATE TABLE selecao (
 	idSelecao INT,
 	nome VARCHAR(45),
 	fkImagem INT, 
+    grupo VARCHAR(45),
     FOREIGN KEY (fkImagem) REFERENCES selecaoImagem (idSelecaoImagem),
 	PRIMARY KEY (idSelecao, fkImagem)
 );
@@ -79,38 +80,38 @@ INSERT INTO selecaoImagem VALUES
 	(32, '../assets/img/selecao/32.png'); -- 32
 
 INSERT INTO selecao VALUES 
-	(1, 'Alemanha', 1), -- 1
-	(2, 'Arábia Saudita', 2), -- 2
-	(3, 'Argentina', 3), -- 3
-	(4, 'Austrália', 4), -- 4
-	(5, 'Bélgica', 5), -- 5
-	(6, 'Brasil', 6), -- 6
-	(7, 'Camarões', 7), -- 7
-	(8, 'Canadá', 8), -- 8
-	(9, 'Catar', 9), -- 9
-	(10, 'Coreia do Sul', 10), -- 10
-	(11, 'Costa Rica', 11), -- 11
-	(12, 'Croácia', 12), -- 12
-	(13, 'Dinamarca',13), -- 13
-	(14, 'Equador', 14), -- 14
-	(15, 'Espanha', 15), -- 15
-	(16, 'Estados Unidos', 16), -- 16
-	(17, 'França', 17), -- 17
-	(18, 'Gana', 18), -- 18
-	(19, 'Holanda', 19), -- 19
-	(20, 'Inglaterra', 20), -- 20
-	(21, 'Irã', 21), -- 21
-	(22, 'Japão', 22), -- 22
-	(23, 'Marrocos', 23), -- 23
-	(24, 'México', 24), -- 24
-	(25, 'País de Gales', 25), -- 25
-	(26, 'Polônia', 26), -- 26
-	(27, 'Portugal', 27), -- 27
-	(28, 'Senegal', 28), -- 28
-	(29, 'Sérvia', 29), -- 29
-	(30, 'Suíça', 30), -- 30
-	(31, 'Tunísia', 31), -- 31
-	(32, 'Uruguai', 32); -- 32
+	(1, 'Alemanha', 1, 'E'), -- 1
+	(2, 'Arábia Saudita', 2, 'C'), -- 2
+	(3, 'Argentina', 3, 'C'), -- 3
+	(4, 'Austrália', 4, 'D'), -- 4
+	(5, 'Bélgica', 5, 'F'), -- 5
+	(6, 'Brasil', 6, 'G'), -- 6
+	(7, 'Camarões', 7, 'G'), -- 7
+	(8, 'Canadá', 8, 'F'), -- 8
+	(9, 'Catar', 9, 'A'), -- 9
+	(10, 'Coreia do Sul', 10, 'H'), -- 10
+	(11, 'Costa Rica', 11, 'E'), -- 11
+	(12, 'Croácia', 12, 'F'), -- 12
+	(13, 'Dinamarca', 13, 'D'), -- 13
+	(14, 'Equador', 14, 'A'), -- 14
+	(15, 'Espanha', 15, 'E'), -- 15
+	(16, 'Estados Unidos', 16, 'B'), -- 16
+	(17, 'França', 17, 'D'), -- 17
+	(18, 'Gana', 18, 'H'), -- 18
+	(19, 'Holanda', 19, 'A'), -- 19
+	(20, 'Inglaterra', 20, 'B'), -- 20
+	(21, 'Irã', 21, 'B'), -- 21
+	(22, 'Japão', 22, 'E'), -- 22
+	(23, 'Marrocos', 23, 'F'), -- 23
+	(24, 'México', 24, 'C'), -- 24
+	(25, 'País de Gales', 25, 'B'), -- 25
+	(26, 'Polônia', 26, 'C'), -- 26
+	(27, 'Portugal', 27, 'H'), -- 27
+	(28, 'Senegal', 28, 'A'), -- 28
+	(29, 'Sérvia', 29, 'G'), -- 29
+	(30, 'Suíça', 30, 'G'), -- 30
+	(31, 'Tunísia', 31, 'D'), -- 31
+	(32, 'Uruguai', 32, 'H'); -- 32
     
 INSERT INTO usuario (nome, sobrenome, email, senha, fkSelecao, fkQuiz) VALUES
 	('Diego', 'Vieira', 'diego@sptech', '123', 6, 1),
@@ -118,9 +119,9 @@ INSERT INTO usuario (nome, sobrenome, email, senha, fkSelecao, fkQuiz) VALUES
 	('Nathan', 'Rodrigo', 'nathan@sptech', '123', 4, 3),
 	('Nilton', 'Gabriel', 'nilton@sptech', '123', 10, 4),
 	('Wilson', 'Kanaiama', 'wilson@sptech', '123', 11, 5),
-	('Lucas', 'Bonfim', 'lucas@sptech', '123', 14, 6);
+	('Lucas', 'Bonfim', 'lucas@sptech', '123', 14, 6),
+    ('Cesar', 'Augusto', 'cesar@sptech', '123', 6, 3);
     
-
 -- Select do Ranking
 SELECT s.nome, COUNT(fkSelecao) 'Ranking', si.imagem FROM usuario as u
         JOIN selecao as s ON fkSelecao = s.idSelecao 
@@ -130,6 +131,7 @@ SELECT s.nome, COUNT(fkSelecao) 'Ranking', si.imagem FROM usuario as u
 
 -- Select das Imagens
 SELECT * FROM selecao JOIN selecaoImagem ON fkImagem = idSelecaoImagem;
-        
+SELECT * FROM selecao;
 SELECT * FROM usuario;
+
 SELECT * FROM quizPersonagem;

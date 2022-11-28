@@ -3,6 +3,7 @@
     var selecao = localStorage.getItem("FK_SELECAO");
     var quiz = localStorage.getItem("FK_QUIZ");
     var nome = localStorage.getItem("NOME_USUARIO");
+    var grupos = '';
 
     function menu() {
 
@@ -21,8 +22,10 @@
 
         var imgs = document.querySelector('#imgSelecao')
         var bandeirao = document.querySelector('#imgBandeirao')
-        var tabela = document.querySelector('.tabela')
+        // var tabela = document.querySelector('.tabela')
         var jogos = document.querySelector('.jogos')
+        var grupo = document.querySelector('.grupo')
+        var corpo = document.querySelector('.corpo')
         
 
         fetch("/selecao/selecao").then(function (resposta) {
@@ -36,7 +39,42 @@
                     // divSelecao.innerHTML = `<img id="imgSelecao" src="${bandeira}" alt="bandeira">`
                     bandeirao.src = `${bandeira}`
 
+
+
                     if (selecao == 3 || selecao == 24 || selecao == 26 || selecao == 2) {
+                        var cont = 0;
+
+                        for (var i = 0; i < response.length; i++) {
+
+                            if (response[i].grupo == 'C'){
+                                cont++
+                                console.log(response[i].nome)
+                                grupo.innerHTML = `<p>Grupo ${response[i].grupo}</p>`
+                                corpo.innerHTML += `
+                            <div class="line">
+                                <div class="lineBody">
+                                    <div id="number">
+                                        <p>${cont}</p>
+                                    </div>
+                                    <div id="tabelaSel">
+                                        <img id="imgLine" src="${response[i].imagem}" alt=""> 
+                                        <p>${response[i].nome}</p>
+                                    </div>
+                                </div>
+                                <div class="lineCount">
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                </div>
+                            </div>`
+                            }
+                        }
 
                             jogos.innerHTML = `<div class="jogos2">
                             <div class="jogos3">
@@ -153,123 +191,43 @@
                                     <span><p>Lusail Iconic</p></span>
                                 </div>
                             </div>
-                        </div>`
-
-                        tabela.innerHTML = `
-                        <div class="tabela1">
-                            <div class="tabela2">
-                                <div class="topo">
-                                    <div class="grupo">
-                                        <p>Grupo C</p>
-                                    </div>
-                                    <div class="parametro">
-                                        <b>PG</b>
-                                        <b>J</b>
-                                        <b>V</b>
-                                        <b>E</b>
-                                        <b>D</b>
-                                        <b>GP</b>
-                                        <b>SG</b>
-                                        <b>GC</b>
-                                        <b>%</b>
-                                    </div>
-                                </div>
-                                <div class="corpo">
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>1º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[3-1].imagem}" alt=""> 
-                                                <p>${response[3-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>2º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[24-1].imagem}" alt=""> 
-                                                <p>${response[24-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>3º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[26-1].imagem}" alt=""> 
-                                                <p>${response[26-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>4º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[2-1].imagem}" alt=""> 
-                                                <p>${response[2-1].nome}</p>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>`;
 
                     } else if (selecao == 19 || selecao == 14 || selecao == 28 || selecao == 9) {
-                                                
+                        var cont = 0;
+
+                        for (var i = 0; i < response.length; i++) {
+
+                            if (response[i].grupo == 'A'){
+                                cont++
+                                console.log(response[i].nome)
+                                grupo.innerHTML = `<p>Grupo ${response[i].grupo}</p>`
+                                corpo.innerHTML += `
+                            <div class="line">
+                                <div class="lineBody">
+                                    <div id="number">
+                                        <p>${cont}</p>
+                                    </div>
+                                    <div id="tabelaSel">
+                                        <img id="imgLine" src="${response[i].imagem}" alt=""> 
+                                        <p>${response[i].nome}</p>
+                                    </div>
+                                </div>
+                                <div class="lineCount">
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                </div>
+                            </div>`
+                            }
+                        }
+
                         jogos.innerHTML = `<div class="jogos2">
                         <div class="jogos3">
                             <div class="jogos3-hora">
@@ -385,121 +343,42 @@
                                 <span><p>Al Bayt</p></span>
                             </div>
                         </div>
-                    </div>`
+                    </div>`;
 
-                        tabela.innerHTML = `
-                        <div class="tabela1">
-                            <div class="tabela2">
-                                <div class="topo">
-                                    <div class="grupo">
-                                        <p>Grupo A</p>
-                                    </div>
-                                    <div class="parametro">
-                                        <b>PG</b>
-                                        <b>J</b>
-                                        <b>V</b>
-                                        <b>E</b>
-                                        <b>D</b>
-                                        <b>GP</b>
-                                        <b>SG</b>
-                                        <b>GC</b>
-                                        <b>%</b>
-                                    </div>
-                                </div>
-                                <div class="corpo">
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>1º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[19-1].imagem}" alt=""> 
-                                                <p>${response[19-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>2º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[14-1].imagem}" alt=""> 
-                                                <p>${response[14-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>3º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[28-1].imagem}" alt=""> 
-                                                <p>${response[28-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>4º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[9-1].imagem}" alt=""> 
-                                                <p>${response[9-1].nome}</p>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>`;
                     } else if (selecao == 20 || selecao == 25 || selecao == 16 || selecao == 21) {
+                        var cont = 0;
+
+                        for (var i = 0; i < response.length; i++) {
+
+                            if (response[i].grupo == 'B'){
+                                cont++
+                                console.log(response[i].nome)
+                                grupo.innerHTML = `<p>Grupo ${response[i].grupo}</p>`
+                                corpo.innerHTML += `
+                            <div class="line">
+                                <div class="lineBody">
+                                    <div id="number">
+                                        <p>${cont}</p>
+                                    </div>
+                                    <div id="tabelaSel">
+                                        <img id="imgLine" src="${response[i].imagem}" alt=""> 
+                                        <p>${response[i].nome}</p>
+                                    </div>
+                                </div>
+                                <div class="lineCount">
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                </div>
+                            </div>`
+                            }
+                        }
                                                 
                         jogos.innerHTML = `<div class="jogos2">
                         <div class="jogos3">
@@ -612,125 +491,46 @@
                             </div>
                             <div class="jogos3-dia">
                                 <p>Terça, 29 de Nov.</p>
-                                <span><p>Grupo C - Jogo 34</p></span>
+                                <span><p>Grupo B - Jogo 34</p></span>
                                 <span><p>Al Thumama</p></span>
                             </div>
                         </div>
-                    </div>`
+                    </div>`;
 
-                        tabela.innerHTML = `
-                        <div class="tabela1">
-                            <div class="tabela2">
-                                <div class="topo">
-                                    <div class="grupo">
-                                        <p>Grupo B</p>
-                                    </div>
-                                    <div class="parametro">
-                                        <b>PG</b>
-                                        <b>J</b>
-                                        <b>V</b>
-                                        <b>E</b>
-                                        <b>D</b>
-                                        <b>GP</b>
-                                        <b>SG</b>
-                                        <b>GC</b>
-                                        <b>%</b>
-                                    </div>
-                                </div>
-                                <div class="corpo">
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>1º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[20-1].imagem}" alt=""> 
-                                                <p>${response[20-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>2º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[25-1].imagem}" alt=""> 
-                                                <p>${response[25-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>3º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[16-1].imagem}" alt=""> 
-                                                <p>${response[16-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>4º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[21-1].imagem}" alt=""> 
-                                                <p>${response[21-1].nome}</p>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>`;
                     } else if (selecao == 17 || selecao == 13 || selecao == 4 || selecao == 31) {
+                        var cont = 0;
+
+                        for (var i = 0; i < response.length; i++) {
+
+                            if (response[i].grupo == 'D'){
+                                cont++
+                                console.log(response[i].nome)
+                                grupo.innerHTML = `<p>Grupo ${response[i].grupo}</p>`
+                                corpo.innerHTML += `
+                            <div class="line">
+                                <div class="lineBody">
+                                    <div id="number">
+                                        <p>${cont}</p>
+                                    </div>
+                                    <div id="tabelaSel">
+                                        <img id="imgLine" src="${response[i].imagem}" alt=""> 
+                                        <p>${response[i].nome}</p>
+                                    </div>
+                                </div>
+                                <div class="lineCount">
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                </div>
+                            </div>`
+                            }
+                        }
                                                 
                         jogos.innerHTML = `<div class="jogos2">
                         <div class="jogos3">
@@ -847,121 +647,42 @@
                                 <span><p>Cidade da Educação</p></span>
                             </div>
                         </div>
-                    </div>`
-                        
-                        tabela.innerHTML = `
-                        <div class="tabela1">
-                            <div class="tabela2">
-                                <div class="topo">
-                                    <div class="grupo">
-                                        <p>Grupo D</p>
-                                    </div>
-                                    <div class="parametro">
-                                        <b>PG</b>
-                                        <b>J</b>
-                                        <b>V</b>
-                                        <b>E</b>
-                                        <b>D</b>
-                                        <b>GP</b>
-                                        <b>SG</b>
-                                        <b>GC</b>
-                                        <b>%</b>
-                                    </div>
-                                </div>
-                                <div class="corpo">
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>1º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[17-1].imagem}" alt=""> 
-                                                <p>${response[17-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>2º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[13-1].imagem}" alt=""> 
-                                                <p>${response[13-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>3º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[4-1].imagem}" alt=""> 
-                                                <p>${response[4-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>4º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[31-1].imagem}" alt=""> 
-                                                <p>${response[31-1].nome}</p>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>`;
+                    </div>`;
+
                     } else if (selecao == 15 || selecao == 1 || selecao == 22 || selecao == 11) {
+                        var cont = 0;
+
+                        for (var i = 0; i < response.length; i++) {
+
+                            if (response[i].grupo == 'E'){
+                                cont++
+                                console.log(response[i].nome)
+                                grupo.innerHTML = `<p>Grupo ${response[i].grupo}</p>`
+                                corpo.innerHTML += `
+                            <div class="line">
+                                <div class="lineBody">
+                                    <div id="number">
+                                        <p>${cont}</p>
+                                    </div>
+                                    <div id="tabelaSel">
+                                        <img id="imgLine" src="${response[i].imagem}" alt=""> 
+                                        <p>${response[i].nome}</p>
+                                    </div>
+                                </div>
+                                <div class="lineCount">
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                </div>
+                            </div>`
+                            }
+                        }
                                                 
                         jogos.innerHTML = `<div class="jogos2">
                         <div class="jogos3">
@@ -1078,121 +799,42 @@
                                 <span><p>Al Bayt</p></span>
                             </div>
                         </div>
-                    </div>`
-                        
-                        tabela.innerHTML = `
-                        <div class="tabela1">
-                            <div class="tabela2">
-                                <div class="topo">
-                                    <div class="grupo">
-                                        <p>Grupo E</p>
-                                    </div>
-                                    <div class="parametro">
-                                        <b>PG</b>
-                                        <b>J</b>
-                                        <b>V</b>
-                                        <b>E</b>
-                                        <b>D</b>
-                                        <b>GP</b>
-                                        <b>SG</b>
-                                        <b>GC</b>
-                                        <b>%</b>
-                                    </div>
-                                </div>
-                                <div class="corpo">
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>1º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[15-1].imagem}" alt=""> 
-                                                <p>${response[15-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>2º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[1-1].imagem}" alt=""> 
-                                                <p>${response[1-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>3º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[22-1].imagem}" alt=""> 
-                                                <p>${response[22-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>4º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[11-1].imagem}" alt=""> 
-                                                <p>${response[11-1].nome}</p>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>`;
+                    </div>`;
+
                     } else if (selecao == 12 || selecao == 23 || selecao == 5 || selecao == 8) {
+                        var cont = 0;
+
+                        for (var i = 0; i < response.length; i++) {
+
+                            if (response[i].grupo == 'F'){
+                                cont++
+                                console.log(response[i].nome)
+                                grupo.innerHTML = `<p>Grupo ${response[i].grupo}</p>`
+                                corpo.innerHTML += `
+                            <div class="line">
+                                <div class="lineBody">
+                                    <div id="number">
+                                        <p>${cont}</p>
+                                    </div>
+                                    <div id="tabelaSel">
+                                        <img id="imgLine" src="${response[i].imagem}" alt=""> 
+                                        <p>${response[i].nome}</p>
+                                    </div>
+                                </div>
+                                <div class="lineCount">
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                </div>
+                            </div>`
+                            }
+                        }
                                                 
                         jogos.innerHTML = `<div class="jogos2">
                         <div class="jogos3">
@@ -1309,121 +951,41 @@
                                 <span><p>Al Thumama</p></span>
                             </div>
                         </div>
-                    </div>`
-                        
-                        tabela.innerHTML = `
-                        <div class="tabela1">
-                            <div class="tabela2">
-                                <div class="topo">
-                                    <div class="grupo">
-                                        <p>Grupo F</p>
-                                    </div>
-                                    <div class="parametro">
-                                        <b>PG</b>
-                                        <b>J</b>
-                                        <b>V</b>
-                                        <b>E</b>
-                                        <b>D</b>
-                                        <b>GP</b>
-                                        <b>SG</b>
-                                        <b>GC</b>
-                                        <b>%</b>
-                                    </div>
-                                </div>
-                                <div class="corpo">
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>1º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[12-1].imagem}" alt=""> 
-                                                <p>${response[12-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>2º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[23-1].imagem}" alt=""> 
-                                                <p>${response[23-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>3º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[5-1].imagem}" alt=""> 
-                                                <p>${response[5-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>4º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[8-1].imagem}" alt=""> 
-                                                <p>${response[8-1].nome}</p>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>`;
+                    </div>`;
                     } else if (selecao == 6 || selecao == 30 || selecao == 29 || selecao == 7) {
+                        var cont = 0;
+
+                        for (var i = 0; i < response.length; i++) {
+
+                            if (response[i].grupo == 'G'){
+                                cont++
+                                console.log(response[i].nome)
+                                grupo.innerHTML = `<p>Grupo ${response[i].grupo}</p>`
+                                corpo.innerHTML += `
+                            <div class="line">
+                                <div class="lineBody">
+                                    <div id="number">
+                                        <p>${cont}</p>
+                                    </div>
+                                    <div id="tabelaSel">
+                                        <img id="imgLine" src="${response[i].imagem}" alt=""> 
+                                        <p>${response[i].nome}</p>
+                                    </div>
+                                </div>
+                                <div class="lineCount">
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                </div>
+                            </div>`
+                            }
+                        }
                                                 
                         jogos.innerHTML = `<div class="jogos2">
                         <div class="jogos3">
@@ -1540,121 +1102,41 @@
                                 <span><p>Lusail Iconic</p></span>
                             </div>
                         </div>
-                    </div>`
-                        
-                        tabela.innerHTML = `
-                        <div class="tabela1">
-                            <div class="tabela2">
-                                <div class="topo">
-                                    <div class="grupo">
-                                        <p>Grupo G</p>
-                                    </div>
-                                    <div class="parametro">
-                                        <b>PG</b>
-                                        <b>J</b>
-                                        <b>V</b>
-                                        <b>E</b>
-                                        <b>D</b>
-                                        <b>GP</b>
-                                        <b>SG</b>
-                                        <b>GC</b>
-                                        <b>%</b>
-                                    </div>
-                                </div>
-                                <div class="corpo">
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>1º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[6-1].imagem}" alt=""> 
-                                                <p>${response[6-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>2º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[30-1].imagem}" alt=""> 
-                                                <p>${response[30-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>3º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[29-1].imagem}" alt=""> 
-                                                <p>${response[29-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>4º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[7-1].imagem}" alt=""> 
-                                                <p>${response[7-1].nome}</p>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>`;
+                    </div>`;
                     } else if (selecao == 27 || selecao == 32 || selecao == 10 || selecao == 18) {
+                        var cont = 0;
+
+                        for (var i = 0; i < response.length; i++) {
+
+                            if (response[i].grupo == 'H'){
+                                cont++
+                                console.log(response[i].nome)
+                                grupo.innerHTML = `<p>Grupo ${response[i].grupo}</p>`
+                                corpo.innerHTML += `
+                            <div class="line">
+                                <div class="lineBody">
+                                    <div id="number">
+                                        <p>${cont}</p>
+                                    </div>
+                                    <div id="tabelaSel">
+                                        <img id="imgLine" src="${response[i].imagem}" alt=""> 
+                                        <p>${response[i].nome}</p>
+                                    </div>
+                                </div>
+                                <div class="lineCount">
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                </div>
+                            </div>`
+                            }
+                        }
                                                 
                         jogos.innerHTML = `<div class="jogos2">
                         <div class="jogos3">
@@ -1771,120 +1253,8 @@
                                 <span><p>Cidade da Educação</p></span>
                             </div>
                         </div>
-                    </div>`
-                        
-                        tabela.innerHTML = `
-                        <div class="tabela1">
-                            <div class="tabela2">
-                                <div class="topo">
-                                    <div class="grupo">
-                                        <p>Grupo H</p>
-                                    </div>
-                                    <div class="parametro">
-                                        <b>PG</b>
-                                        <b>J</b>
-                                        <b>V</b>
-                                        <b>E</b>
-                                        <b>D</b>
-                                        <b>GP</b>
-                                        <b>SG</b>
-                                        <b>GC</b>
-                                        <b>%</b>
-                                    </div>
-                                </div>
-                                <div class="corpo">
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>1º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[27-1].imagem}" alt=""> 
-                                                <p>${response[27-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>2º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[32-1].imagem}" alt=""> 
-                                                <p>${response[32-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>3º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[10-1].imagem}" alt=""> 
-                                                <p>${response[10-1].nome}</p>
-                                            </div>
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                    <div class="line">
-                                        <div class="lineBody">
-                                            <div id="number">
-                                                <p>4º</p>
-                                            </div>
-                                            <div id="tabelaSel">
-                                                <img id="imgLine" src="${response[18-1].imagem}" alt=""> 
-                                                <p>${response[18-1].nome}</p>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="lineCount">
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                            <p>0</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>`;
+                    </div>`;
+
                     }
                     
                 })
@@ -1895,10 +1265,6 @@
         });
 
     }
-
-                    
-                    
-                
 
     function ranking() {
         var circle1 = document.querySelector('.circle1');

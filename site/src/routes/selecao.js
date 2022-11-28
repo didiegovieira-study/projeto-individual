@@ -11,4 +11,5 @@ router.get("/selecao", function (req, res) {
     selecaoController.selecao(req, res);
 });
 
+
 module.exports = router;

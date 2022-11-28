@@ -43,9 +43,9 @@
 
         var choice  = document.getElementById('quizChoice');
         var quizPersonagem  = document.getElementById('quizPersonagem');
-        var quizInfo = document.getElementById('quizInfo');
+        /* var quizInfo = document.getElementById('quizInfo');
         var quizColor = document.getElementById('quizColor');
-        var quizImagem = document.getElementById('quizImagem');
+        var quizImagem = document.getElementById('quizImagem'); */
 
         fetch("/usuarios/listar").then(function (resposta2) {
             if (resposta2.ok) {
