@@ -139,8 +139,9 @@ h1 {
     padding: 10px;
 }
 
-.quizInfo h1 {
-    font-size: 25px;
+.quizInfo h1, .quizInfo h2 {
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .quizInfo p {
@@ -149,10 +150,15 @@ h1 {
 }
 
 .quizImagem {
-    background-image: url(../img/quiz/);
-    width: 25px;
-    height: 25px;
-    border-radius: 50px;
-    object-fit: cover;
     position: absolute;
+    left: 550px;
+    top: 120px;
+}
+
+.quizImagem img {
+    /* background-image: url(../img/quiz/kaka.png); */
+    width: 250px;
+    height: 200px;
+    border-radius: 100px;
+    object-fit: cover;
 }
