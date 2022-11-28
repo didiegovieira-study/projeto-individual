@@ -162,4 +162,5 @@ h1 {
     height: 150px;
     /* border-radius: 100px; */
     object-fit: cover;
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
 }

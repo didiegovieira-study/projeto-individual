@@ -27,7 +27,7 @@
 
                 resposta.json().then(function (response) {
                     console.log(response[selecao-1].imagem);
-                    console.log(response[selecao-1].fkQuiz);
+                    // console.log(response[selecao-1].fkQuiz);
                     var bandeira = response[selecao-1].imagem;
                     imgs.src = `${bandeira}`;
 
@@ -35,6 +35,9 @@
             }
         });
     };
+
+    // var quiz = 0;
+    var guardar = 0;
 
     function quizFunc() {
 
@@ -49,14 +52,39 @@
                 console.log(resposta2)
 
                 resposta2.json().then(function (response2) {
-                    var quiz = response2[id-1].fkQuiz;
-                    console.log(response2[id-1].fkQuiz);
+                    // quiz = response2[id-1].fkQuiz;
+                    // console.log(response2[id-1].fkQuiz);
 
+                    if (response2[id-1].fkQuiz != undefined) {
+
+                        alert('Parabéns, você já possui personagem!')
+                        choice.style.display = 'none'
+                        quizPersonagem.style.display = 'flex'
+
+
+                        mostrar();
+
+                    } else {
+
+                        alert('Parece que você ainda não tem um personagem, faça o Quiz e receba um!')
+                        choice.style.display = 'flex'
+                        quizPersonagem.style.display = 'none'
+
+                    }
                     
-
                 });
             }
         });
+
+        
+    };
+
+    function mostrar() {
+        var choice  = document.getElementById('quizChoice');
+        var quizPersonagem  = document.getElementById('quizPersonagem');
+        var quizInfo = document.getElementById('quizInfo');
+        var quizColor = document.getElementById('quizColor');
+        var quizImagem = document.getElementById('quizImagem');
 
         fetch("/quiz/quizListar").then(function (resposta3) {
             if (resposta3.ok) {
@@ -68,10 +96,10 @@
 
                     // var idQuiz = response3[id-1].idQuiz;
 
-                    console.log(response3[id-1])
+                    console.log(response3[id-1].nome)
 
                     if (quiz != undefined) {
-                        alert('voce possui personagem')
+                        // alert('Parabéns, você já possui personagem!')
                         choice.style.display = 'none'
                         quizPersonagem.style.display = 'flex'
 
@@ -84,7 +112,7 @@
                         quizColor.style.backgroundColor = `${response3[id-1].color}`
                         quizImagem.src = `${response3[id-1].imagem}`
                     } else {
-                        alert('Parece que você ainda não tem um personagem, faça o Quiz e receba um!')
+                        // alert('Parece que você ainda não tem um personagem, faça o Quiz e receba um!')
                         choice.style.display = 'flex'
                         quizPersonagem.style.display = 'none'
                     }
@@ -92,7 +120,7 @@
                 });
             }
         });
-    };
+    }
 
 
     // var valores = [];
@@ -251,6 +279,7 @@
                 if (choice8.style.display == 'flex') {
                     choice8.style.display = 'none'
                     quizPersonagem.style.display = 'flex'
+                    
                 }
             
                 }
