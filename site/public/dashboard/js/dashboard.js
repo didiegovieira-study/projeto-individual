@@ -1266,47 +1266,55 @@
 
     }
 
+    
     function ranking() {
         var circle1 = document.querySelector('.circle1');
         var circle2 = document.querySelector('.circle2');
         var circle3 = document.querySelector('.circle3');
         var table2 = document.querySelector('.table2');
-
+        
         fetch("/ranking/ranking").then(function (resposta2) {
             if (resposta2.ok) {
                 console.log(resposta2)
-
+                
                 resposta2.json().then(function (response2) {
                     console.log(response2[0]);
                     
-                    for (var i = 0; i < response2.length; i++) {
-                        
+                    var i = 0;
+                    while (i < response2.length) {
                         var rank = response2[i].Ranking;
                         var nome = response2[i].nome;
                         var imagem = response2[i].imagem;
-                        
+
                         if (i == 0) {
+
                             circle1.innerHTML = `
                             <b><p>1º</p></b>
                             <img src="${imagem}" alt="">
                             <p>${nome}</p>
                             <p><i>Votos: <b>${rank}</b></i></p>`
+                            
                         } else if (i == 1) {
+
                             circle2.innerHTML = `
                             <b><p>2º</p></b>
                             <img src="${imagem}" alt="">
                             <p>${nome}</p>
                             <p><i>Votos: <b>${rank}</b></i></p>`
+                            
                         } else if (i == 2) {
+
                             circle3.innerHTML = `
                             <b><p>3º</p></b>
                             <img src="${imagem}" alt="">
                             <p>${nome}</p>
                             <p><i>Votos: <b>${rank}</b></i></p>`
+                            
                         }
 
 
                         if (i > 3) {
+
                             table2.innerHTML += `
                             <div class="lineTable">
                                 <b><p>${i}º</p></b>
@@ -1316,12 +1324,14 @@
                                     <p><i>Votos: <b>${rank}</b></i></p>
                                 </div>
                             </div>`
+                            
                         }
 
                         if (i == 10) {
                             break
                         }
 
+                        i++
                     }
                     
                 })
