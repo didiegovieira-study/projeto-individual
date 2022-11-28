@@ -40,6 +40,9 @@
 
         var choice  = document.getElementById('quizChoice');
         var quizPersonagem  = document.getElementById('quizPersonagem');
+        var quizInfo = document.getElementById('quizInfo');
+        var quizColor = document.getElementById('quizColor');
+        var quizImagem = document.getElementById('quizImagem');
 
         fetch("/usuarios/listar").then(function (resposta2) {
             if (resposta2.ok) {
@@ -49,15 +52,7 @@
                     var quiz = response2[id-1].fkQuiz;
                     console.log(response2[id-1].fkQuiz);
 
-                    if (quiz != undefined) {
-                        alert('voce possui personagem')
-                        choice.style.display = 'none'
-                        quizPersonagem.style.display = 'flex'
-                    } else {
-                        alert('Parece que você ainda não tem um personagem, faça o Quiz e receba um!')
-                        choice.style.display = 'flex'
-                        quizPersonagem.style.display = 'none'
-                    }
+                    
 
                 });
             }
@@ -74,6 +69,25 @@
                     // var idQuiz = response3[id-1].idQuiz;
 
                     console.log(response3[id-1])
+
+                    if (quiz != undefined) {
+                        alert('voce possui personagem')
+                        choice.style.display = 'none'
+                        quizPersonagem.style.display = 'flex'
+
+                        quizInfo.innerHTML = `
+                        <h1><b>Nome:</b> ${response3[id-1].nome}</h1>
+                                    <h2><b>Idade:</b> ${response3[id-1].idade}</h2>
+                                    <h2><b>Posição:</b> ${response3[id-1].posicao}</h2>
+                                    <p><b>Descrição:</b> ${response3[id-1].descricao}</p>
+                        `
+                        quizColor.style.backgroundColor = `${response3[id-1].color}`
+                        quizImagem.src = `${response3[id-1].imagem}`
+                    } else {
+                        alert('Parece que você ainda não tem um personagem, faça o Quiz e receba um!')
+                        choice.style.display = 'flex'
+                        quizPersonagem.style.display = 'none'
+                    }
 
                 });
             }

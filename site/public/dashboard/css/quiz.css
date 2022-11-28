@@ -117,15 +117,16 @@ h1 {
 .quizBox {
     width: 25vw;
     height: 80vh;
-    background-color: #2666CF;
     border-radius: 10px;
+    background-color: hsla(0, 0%, 100%, 0.4);
+    box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
 }
 
 .quizColor {
     height: 30vh;
     width: 100%;
     border-radius: 10px 10px 0px 0px;
-    background-color: black;
+    background-color: #252525;
 }
 
 .quizInfo {
@@ -151,14 +152,14 @@ h1 {
 
 .quizImagem {
     position: absolute;
-    left: 550px;
-    top: 120px;
+    left: 625px;
+    top: 160px;
 }
 
 .quizImagem img {
     /* background-image: url(../img/quiz/kaka.png); */
-    width: 250px;
-    height: 200px;
-    border-radius: 100px;
+    width: 120px;
+    height: 150px;
+    /* border-radius: 100px; */
     object-fit: cover;
 }
