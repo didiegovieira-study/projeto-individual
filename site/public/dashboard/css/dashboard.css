@@ -23,7 +23,7 @@
 
 .menu {
     width: 200px;
-    height: 400px;
+    height: 360px;
     background-color: rgb(241, 241, 241);
     border-radius: 10px;
     position: absolute;
@@ -32,7 +32,7 @@
     border-radius: 10px;
     color: #252525;
     padding: 15px;
-    /* border: 1px solid white; */
+    border: 1px solid #252525;
     box-shadow: 0 20px 50px 3px rgb(47 47 47 / 11%);
 
 }

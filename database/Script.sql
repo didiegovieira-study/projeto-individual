@@ -5,10 +5,11 @@ USE projeto;
 CREATE TABLE quizPersonagem (
 	idQuiz INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(45),
-	descricao VARCHAR(45),
+	descricao LONGTEXT,
 	posicao VARCHAR(45),
 	idade INT,
-	imagem MEDIUMTEXT
+	imagem MEDIUMTEXT,
+    color VARCHAR(45)
 );
 
 CREATE TABLE selecaoImagem (
@@ -35,8 +36,13 @@ CREATE TABLE usuario (
 );
 
 INSERT INTO quizPersonagem VALUES
-	(1, 'Cristiano Ronaldo', 'Cristiano Ronaldo dos Santos Aveiro é um futebolista português que atua como extremo-esquerdo ou ponta de lança. Atualmente está sem clube, mas joga pela Seleção Portuguesa, onde é capitão.', 'ST', '37', ''),
-	();
+	(1, 'Cristiano Ronaldo', 'Cristiano Ronaldo dos Santos Aveiro é um futebolista português que atua como extremo-esquerdo ou ponta de lança. Atualmente está sem clube, mas joga pela Seleção Portuguesa, onde é capitão.', 'ST', 37, './img/quiz/cr7.png', '#252525'),
+	(2, 'Neuer', 'Manuel Peter Neuer é um futebolista alemão que atua como goleiro. Atualmente defende o Bayern de Munique e a Seleção Alemã.', 'GK', 36, './img/quiz/neuer.png', 'palegreen'),
+	(3, 'Messi', 'Lionel Andrés Messi Cuccittini é um futebolista argentino que atua como atacante. Atualmente joga pelo Paris Saint-Germain e pela Seleção Argentina, onde é capitão.', 'ST', 35, './img/quiz/messi.png', '#2666CF'),
+	(4, 'Pele', 'Edson Arantes do Nascimento, mais conhecido como Pelé, é um ex-futebolista brasileiro que atuava como atacante. Ele é amplamente considerado como um dos maiores atletas de todos os tempos.', 'ST', 82, './img/quiz/pele.png', 'oldlace'),
+	(5, 'Kaka', 'Ricardo Izecson dos Santos Leite, mais conhecido como Kaká, é um ex-futebolista brasileiro que atuava como meio-campista.', 'CM', 40, './img/quiz/kaka.png', 'palevioletred'),
+	(6, 'Neymar', 'Neymar da Silva Santos Júnior, mais conhecido apenas como Neymar, é um futebolista brasileiro que atua como atacante. Atualmente joga pelo Paris Saint-Germain e pela Seleção Brasileira. É considerado o principal futebolista brasileiro da atualidade e um dos melhores futebolistas do mundo.', 'CM', 30, './img/quiz/neymar.png', 'khaki'),
+	(7, 'Puyol', 'Carles Puyol i Saforcada, mais conhecido por Puyol é um ex-futebolista espanhol que atuava como zagueiro.', 'CB', 44, './img/quiz/puyol.png', 'salmon');
 
 INSERT INTO selecaoImagem VALUES
 	(1, '../assets/img/selecao/1.png'), -- 1
@@ -105,6 +111,15 @@ INSERT INTO selecao VALUES
 	(30, 'Suíça', 30), -- 30
 	(31, 'Tunísia', 31), -- 31
 	(32, 'Uruguai', 32); -- 32
+    
+INSERT INTO usuario (nome, sobrenome, email, senha, fkSelecao, fkQuiz) VALUES
+	('Diego', 'Vieira', 'diego@sptech', '123', 6, 1),
+	('Igor', 'Gabriel', 'igor@sptech', '123', 2, 2),
+	('Nathan', 'Rodrigo', 'nathan@sptech', '123', 4, 3),
+	('Nilton', 'Gabriel', 'nilton@sptech', '123', 10, 4),
+	('Wilson', 'Kanaiama', 'wilson@sptech', '123', 11, 5),
+	('Lucas', 'Bonfim', 'lucas@sptech', '123', 14, 6);
+    
 
 -- Select do Ranking
 SELECT s.nome, COUNT(fkSelecao) 'Ranking', si.imagem FROM usuario as u
@@ -117,3 +132,4 @@ SELECT s.nome, COUNT(fkSelecao) 'Ranking', si.imagem FROM usuario as u
 SELECT * FROM selecao JOIN selecaoImagem ON fkImagem = idSelecaoImagem;
         
 SELECT * FROM usuario;
+SELECT * FROM quizPersonagem;

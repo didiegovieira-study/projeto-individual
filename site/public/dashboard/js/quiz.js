@@ -61,7 +61,7 @@
                         choice.style.display = 'none'
                         quizPersonagem.style.display = 'flex'
 
-
+                        quiz = response2[id-1].fkQuiz
                         mostrar();
 
                     } else {
@@ -96,7 +96,7 @@
 
                     // var idQuiz = response3[id-1].idQuiz;
 
-                    console.log(response3[id-1].nome)
+                    // console.log(response3[id-1].nome)
 
                     if (quiz != undefined) {
                         // alert('Parabéns, você já possui personagem!')
@@ -104,13 +104,13 @@
                         quizPersonagem.style.display = 'flex'
 
                         quizInfo.innerHTML = `
-                        <h1><b>Nome:</b> ${response3[id-1].nome}</h1>
-                                    <h2><b>Idade:</b> ${response3[id-1].idade}</h2>
-                                    <h2><b>Posição:</b> ${response3[id-1].posicao}</h2>
-                                    <p><b>Descrição:</b> ${response3[id-1].descricao}</p>
+                        <h1><b>Nome:</b> ${response3[quiz-1].nome}</h1>
+                                    <h2><b>Idade:</b> ${response3[quiz-1].idade}</h2>
+                                    <h2><b>Posição:</b> ${response3[quiz-1].posicao}</h2>
+                                    <p><b>Descrição:</b> ${response3[quiz-1].descricao}</p>
                         `
-                        quizColor.style.backgroundColor = `${response3[id-1].color}`
-                        quizImagem.src = `${response3[id-1].imagem}`
+                        quizColor.style.backgroundColor = `${response3[quiz-1].color}`
+                        quizImagem.src = `${response3[quiz-1].imagem}`
                     } else {
                         // alert('Parece que você ainda não tem um personagem, faça o Quiz e receba um!')
                         choice.style.display = 'flex'
@@ -174,6 +174,7 @@
         } else if (choice7.style.display == 'flex') {
             choice7.style.display = 'none'
             choice8.style.display = 'flex'
+            
         } 
 
             var evento = option;
@@ -238,6 +239,7 @@
                 } else if (maior.nome == 'responsabilidade') {
                     personagem = 7;
                 }
+
                 
             };
 
@@ -279,10 +281,12 @@
                 if (choice8.style.display == 'flex') {
                     choice8.style.display = 'none'
                     quizPersonagem.style.display = 'flex'
-                    
+
+                    quiz = Number(personagem);
+                    mostrar();
                 }
             
-                }
+            }
 
             
 
