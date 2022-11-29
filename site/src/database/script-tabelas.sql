@@ -115,12 +115,15 @@ INSERT INTO selecao VALUES
     
 INSERT INTO usuario (nome, sobrenome, email, senha, fkSelecao, fkQuiz) VALUES
 	('Diego', 'Vieira', 'diego@sptech', '123', 6, 1),
-	('Igor', 'Gabriel', 'igor@sptech', '123', 2, 2),
-	('Nathan', 'Rodrigo', 'nathan@sptech', '123', 4, 3),
-	('Nilton', 'Gabriel', 'nilton@sptech', '123', 10, 4),
-	('Wilson', 'Kanaiama', 'wilson@sptech', '123', 11, 5),
-	('Lucas', 'Bonfim', 'lucas@sptech', '123', 14, 6),
-    ('Cesar', 'Augusto', 'cesar@sptech', '123', 6, 3);
+	('Igor', 'Gabriel', 'igor@sptech', '123', 1, 2),
+	('Nathan', 'Rodrigo', 'nathan@sptech', '123', 3, 3),
+	('Nilton', 'Gabriel', 'nilton@sptech', '123', 12, 4),
+	('Wilson', 'Kanaiama', 'wilson@sptech', '123', 13, 5),
+	('Rafael', 'Aldo', 'rafael@sptech', '123', 15, 1),
+	('Matheus', 'Lessa', 'matheus@sptech', '123', 17, 6),
+	('José', 'Gabriel', 'jose@sptech', '123', 27, 6),
+	('Lucas', 'Bonfim', 'lucas@sptech', '123', 19, 6),
+    ('Cesar', 'Augusto', 'cesar@sptech', '123', 32, 3);
     
 -- Select do Ranking
 SELECT s.nome, COUNT(fkSelecao) 'Ranking', si.imagem FROM usuario as u
