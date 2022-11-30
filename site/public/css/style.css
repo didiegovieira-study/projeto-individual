@@ -114,6 +114,7 @@ h2 {
 .text2 h1 {
     color: #252525;
     font-size: 50px;
+    font-weight: 500;
 }
 
 .text2-2 h1 {
@@ -125,6 +126,7 @@ h2 {
 .text2-2 p {
     margin-top: 10px;
     margin-left: 60px;
+    font-weight: 100;
 }
 
 
