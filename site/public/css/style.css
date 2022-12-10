@@ -335,8 +335,8 @@ h2 {
 .cur1 {
     width: 35vw;
     height: 100%;
-    overflow: auto;
     padding: 10px;
+    overflow: auto;
 }
 
 .cur1::-webkit-scrollbar {
